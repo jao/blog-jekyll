@@ -1,0 +1,30 @@
+---
+layout: post
+title: git, pushing to multiple repositories
+---
+ 
+<p>I was looking for a way to keep more than one repository updated when I&#8217;m working on personal projects, don&#8217;t ask. So I found some useful information I&#8217;m going to post here for future reference.</p>
+<p>Example part of a &#8220;.git/config&#8221; file:</p>
+<pre><code>[remote 'all']
+    url=ssh://user&amp;#64;server/repos/g0.git
+    url=ssh://user&amp;#64;server/repos/g1.git
+    url=ssh://user&amp;#64;server/repos/g2.git
+    url=ssh://user&amp;#64;server/repos/g3.git</code></pre>
+<p>With that &#8220;git push all&#8221; should push to all the remotes simultaneously.</p>
+<p>If you have:</p>
+<pre><code>[branch 'master']
+    remote = g0
+    merge = refs/heads/master
+[remote 'g0']
+    url = ssh://user&amp;#64;server/repos/g0.git
+    fetch = +refs/heads/*:refs/remotes/g0/*</code></pre>
+<p>Then &#8220;pulls&#8221; and &quot;fetch&quot;&#8217;s while on the master branch should only only target <code>ssh://user&amp;#64;server/repos/g0.git</code>.</p>
+<p>Better yet:</p>
+<pre><code>[branch 'master']
+    remote = origin
+    merge = refs/heads/master
+[remote 'origin']
+    url = ssh://user&amp;#64;server/repos/g0.git
+    fetch = +refs/heads/*:refs/remotes/g0/*</code></pre>
+<p>Then <code>ssh://user&amp;#64;server/repos/g0.git</code> is the default remote (&#8220;origin&#8221;) for pulls and fetches if no remote name is specified.</p>
+<p><a href="http://marc.info/?l=git&amp;m=116231242118202&amp;w=2">source</a></p>
