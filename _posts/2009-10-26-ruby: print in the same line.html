@@ -1,11 +1,11 @@
 ---
 layout: post
-title: ruby: print in the same line
+title: "ruby: print in the same line"
 ---
  
 I’ve always tried to make my scripts’ responses prettier and less crowded, and I came across something like the following piece of code, that helped me a lot lately
 
-<code><pre class="brush: ruby">#!/usr/bin/env ruby
+#!/usr/bin/env ruby
 STDOUT.sync = true
 bars = ['/','-','\\','|']
 i=1
@@ -18,5 +18,5 @@ trap("INT") {
   print "\n\n"
   exit
 }
-</pre></code>
+
 If you like to see updates without flooding your terminal screen, this is one of the best ways to do it.

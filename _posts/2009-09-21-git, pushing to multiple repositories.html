@@ -3,7 +3,7 @@ layout: post
 title: git, pushing to multiple repositories
 ---
  
-<p>I was looking for a way to keep more than one repository updated when I&#8217;m working on personal projects, don&#8217;t ask. So I found some useful information I&#8217;m going to post here for future reference.</p>
+I was looking for a way to keep more than one repository updated when I'm working on personal projects, don't ask. So I found some useful information I'm going to post here for future reference.
 <p>Example part of a &#8220;.git/config&#8221; file:</p>
 <pre><code>[remote 'all']
     url=ssh://user&amp;#64;server/repos/g0.git
@@ -18,7 +18,7 @@ title: git, pushing to multiple repositories
 [remote 'g0']
     url = ssh://user&amp;#64;server/repos/g0.git
     fetch = +refs/heads/*:refs/remotes/g0/*</code></pre>
-<p>Then &#8220;pulls&#8221; and &quot;fetch&quot;&#8217;s while on the master branch should only only target <code>ssh://user&amp;#64;server/repos/g0.git</code>.</p>
+<p>Then &#8220;pulls&#8221; and &quot;fetch&quot;'s while on the master branch should only only target <code>ssh://user&amp;#64;server/repos/g0.git</code>.</p>
 <p>Better yet:</p>
 <pre><code>[branch 'master']
     remote = origin
