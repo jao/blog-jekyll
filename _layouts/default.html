@@ -13,8 +13,6 @@
     </section>
   </header>
   <section id="content">
-    {{ content }}
-    
     <aside>
       <h3>about me</h3>
       <div class="me"><img src="/images/me.jpg" alt="" /></div>
@@ -25,14 +23,14 @@
         <li><a href="{{ post.url | replace:'+','%20' }}">{{ post.title }}</a></li>
       {% endfor %}
       </ul>
-
+      
       <h3>code related</h3>
       <ul>
       {% for post in site.categories.code limit: 5 %}
         <li><a href="{{ post.url | replace:'+','%20' }}">{{ post.title }}</a></li>
       {% endfor %}
       </ul>
-
+      
       <h3>useless stuff</h3>
       <ul>
       {% for post in site.categories.wishlist limit: 5 %}
@@ -40,13 +38,16 @@
       {% endfor %}
       </ul>
     </aside>
+    
+    {{ content }}
+    
   </section>
   <footer>
-    <section>
+    <section id="archive">
       <h2>archive</h2>
       <ul>
       {% for post in site.posts %}
-        <li><span id="date">{{ post.date | date: "%d/%m/%Y" }}</span> &raquo; <a href="{{ post.url | replace:'+','%20' }}">{{ post.title }}</a></li>
+        <li><a href="{{ post.url | replace:'+','%20' }}">{{ post.title }}</a></li>
       {% endfor %}
       </ul>
     </section>

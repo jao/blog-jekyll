@@ -4,7 +4,7 @@
  <title>jp camargo</title>
  <link href="http://jpcamargo.com/atom.xml" rel="self"/>
  <link href="http://jpcamargo.com/"/>
- <updated>2011-05-09T19:25:07-03:00</updated>
+ <updated>2011-05-09T19:52:16-03:00</updated>
  <id>http://jpcamargo.com/</id>
  <author>
    <name>João Paulo Camargo</name>
@@ -60,189 +60,146 @@ monthly report&lt;/p&gt;
    <link href="http://jpcamargo.com/2010/04/30/ports+wipe+%7C+homebrew+%2B+rvm"/>
    <updated>2010-04-30T00:00:00-03:00</updated>
    <id>http://jpcamargo.com/2010/04/30/ports wipe | homebrew + rvm</id>
-   <content type="html">Recently I've heard about &lt;a href=&quot;http://twitter.com/mxcl&quot;&gt;Max Howell&lt;/a&gt;'s &lt;a href=&quot;http://mxcl.github.com/homebrew/&quot;&gt;&lt;strong&gt;homebrew&lt;/strong&gt;&lt;/a&gt; and Wayne E. Seguin's &lt;a href=&quot;http://rvm.beginrescueend.com/&quot;&gt;&lt;abbr title=&quot;Rails Version Manager&quot;&gt;&lt;strong&gt;rvm&lt;/strong&gt;&lt;/abbr&gt;&lt;/a&gt; from a friend (&lt;a href=&quot;http://rodrigofranco.com&quot;&gt;caffo&lt;/a&gt;), and hearing that they were both pretty cool, I decided to give them a shot.
-
-So if, like me, you are curious about these tools, I'll post what I did to install them.
-
-First I made backups (by moving some folders around)
-&lt;div&gt;
-  &lt;pre&gt;
+   <content type="html">&lt;p&gt;Recently I&amp;#8217;ve heard about &lt;a href=&quot;http://twitter.com/mxcl&quot;&gt;Max Howell&lt;/a&gt; &amp;#8216;s &lt;a href=&quot;http://mxcl.github.com/homebrew&quot;&gt;&lt;strong&gt;homebrew&lt;/strong&gt;&lt;/a&gt; and Wayne E. Seguin&amp;#8217;s &lt;a href=&quot;http://rvm.beginrescueend.com&quot;&gt;&lt;strong&gt;rvm&lt;/strong&gt;&lt;/a&gt; from a friend (&lt;a href=&quot;http://rodrigofranco.com&quot;&gt;caffo&lt;/a&gt;), and hearing that they were both pretty cool, I decided to give them a shot.&lt;/p&gt;
+&lt;p&gt;So if, like me, you are curious about these tools, I&amp;#8217;ll post what I did to install them.&lt;/p&gt;
+&lt;p&gt;First I made backups (by moving some folders around)&lt;br /&gt;
+&lt;div&gt;&lt;br /&gt;
+  &lt;pre&gt;&lt;br /&gt;
     &lt;code class='sh'&gt;mv ~/.gem ~/gems-old
-sudo mv /opt/local ~/macports-old&lt;/code&gt;
-  &lt;/pre&gt;
+sudo mv /opt/local ~/macports-old&lt;/code&gt;&lt;br /&gt;
+  &lt;/pre&gt;&lt;/p&gt;
 &lt;/div&gt;
-
-
-You could also install a gem called 'rubygems_snapshot' and do a
-&lt;div&gt;
-  &lt;pre&gt;
-    &lt;code class='sh'&gt;gem snapshot export ~/my_gem_list.yml&lt;/code&gt;
-  &lt;/pre&gt;
+&lt;p&gt;You could also install a gem called &amp;#8216;rubygems_snapshot&amp;#8217; and do a&lt;br /&gt;
+&lt;div&gt;&lt;br /&gt;
+  &lt;pre&gt;&lt;br /&gt;
+    &lt;code class='sh'&gt;gem snapshot export ~/my_gem_list.yml&lt;/code&gt;&lt;br /&gt;
+  &lt;/pre&gt;&lt;/p&gt;
 &lt;/div&gt;
-
-or a simple
-&lt;div&gt;
-  &lt;pre&gt;
-    &lt;code class='sh'&gt;gem list &amp;gt; ~/gem_list.txt&lt;/code&gt;
-  &lt;/pre&gt;
+&lt;p&gt;or a simple&lt;br /&gt;
+&lt;div&gt;&lt;br /&gt;
+  &lt;pre&gt;&lt;br /&gt;
+    &lt;code class='sh'&gt;gem list &amp;amp;gt; ~/gem_list.txt&lt;/code&gt;&lt;br /&gt;
+  &lt;/pre&gt;&lt;/p&gt;
 &lt;/div&gt;
-
-and just plain delete your user gem repository
-&lt;div&gt;
-  &lt;pre&gt;
-    &lt;code class='sh'&gt;rm -rf ~/.gem/&lt;/code&gt;
-  &lt;/pre&gt;
+&lt;p&gt;and just plain delete your user gem repository&lt;br /&gt;
+&lt;div&gt;&lt;br /&gt;
+  &lt;pre&gt;&lt;br /&gt;
+    &lt;code class='sh'&gt;rm -rf ~/.gem/&lt;/code&gt;&lt;br /&gt;
+  &lt;/pre&gt;&lt;/p&gt;
 &lt;/div&gt;
-
-Of course I am assuming you were installing them in your home directory, why wouldn't you be?
-
-But if by any chance you have gems installed all over the place you could try running this instead (since this would remove the applicable executables as well):
-&lt;div&gt;
-  &lt;pre&gt;
-    &lt;code class='sh'&gt;sudo gem list | awk '{print $1}' | xargs sudo gem uninstall -a -x -i&lt;/code&gt;
-  &lt;/pre&gt;
+&lt;p&gt;Of course I am assuming you were installing them in your home directory, why wouldn&amp;#8217;t you be?&lt;/p&gt;
+&lt;p&gt;But if by any chance you have gems installed all over the place you could try running this instead (since this would remove the applicable executables as well):&lt;br /&gt;
+&lt;div&gt;&lt;br /&gt;
+  &lt;pre&gt;&lt;br /&gt;
+    &lt;code class='sh'&gt;sudo gem list | awk '{print $1}' | xargs sudo gem uninstall -a -x -i&lt;/code&gt;&lt;br /&gt;
+  &lt;/pre&gt;&lt;/p&gt;
 &lt;/div&gt;
-
-
-Now let's get started.
-
-&lt;h3&gt;Installing homebrew&lt;/h3&gt;
-&quot;_official installation instructions_&quot;:http://wiki.github.com/mxcl/homebrew/installation
-
-Start by running:
-&lt;div&gt;
-  &lt;pre&gt;
-    &lt;code class='sh'&gt;ruby &amp;lt; &amp;lt;( curl 'http://gist.github.com/raw/323731/25f99360c7de3f72027d8fd07cb369b1c8756ea6/install_homebrew.rb' )&lt;/code&gt;
-  &lt;/pre&gt;
+&lt;p&gt;Now let&amp;#8217;s get started.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Installing homebrew&lt;/strong&gt;&lt;br /&gt;
+&lt;a href=&quot;http://wiki.github.com/mxcl/homebrew/installation&quot;&gt;&lt;em&gt;official installation instructions&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Start by running:&lt;br /&gt;
+&lt;div&gt;&lt;br /&gt;
+  &lt;pre&gt;&lt;br /&gt;
+    &lt;code class='sh'&gt;ruby &amp;amp;lt; &amp;amp;lt;( curl 'http://gist.github.com/raw/323731/25f99360c7de3f72027d8fd07cb369b1c8756ea6/install_homebrew.rb' )&lt;/code&gt;&lt;br /&gt;
+  &lt;/pre&gt;&lt;/p&gt;
 &lt;/div&gt;
-
-or download it from &lt;a href=&quot;http://gist.github.com/323731&quot;&gt;here&lt;/a&gt; and run it yourself.
-
-If by any chance you don't trust or know what that does, you can test it by running the code below that calls this &lt;a href=&quot;http://gist.github.com/385387&quot;&gt;simple and safe ruby script&lt;/a&gt; first.
-&lt;div&gt;
-  &lt;pre&gt;
-    &lt;code class='sh'&gt;ruby &amp;lt; &amp;lt;( curl 'http://gist.github.com/raw/385387/0cacf4231fceb621c987221ee0aaa380be2bca5d/testing_download_and_run.rb' )&lt;/code&gt;
-  &lt;/pre&gt;
+&lt;p&gt;or download it from &lt;a href=&quot;http://gist.github.com/323731&quot;&gt;here&lt;/a&gt; and run it yourself.&lt;/p&gt;
+&lt;p&gt;If by any chance you don&amp;#8217;t trust or know what that does, you can test it by running the code below that calls this &lt;a href=&quot;http://gist.github.com/385387&quot;&gt;simple and safe ruby script&lt;/a&gt; first.&lt;br /&gt;
+&lt;div&gt;&lt;br /&gt;
+  &lt;pre&gt;&lt;br /&gt;
+    &lt;code class='sh'&gt;ruby &amp;amp;lt; &amp;amp;lt;( curl 'http://gist.github.com/raw/385387/0cacf4231fceb621c987221ee0aaa380be2bca5d/testing_download_and_run.rb' )&lt;/code&gt;&lt;br /&gt;
+  &lt;/pre&gt;&lt;/p&gt;
 &lt;/div&gt;
-
-
-If you are curious, this is the source of that gist:
-&lt;div&gt;
-  &lt;pre&gt;
+&lt;p&gt;If you are curious, this is the source of that gist:&lt;br /&gt;
+&lt;div&gt;&lt;br /&gt;
+  &lt;pre&gt;&lt;br /&gt;
     &lt;code class='sh'&gt;#!/usr/bin/env ruby
-puts 'Hello World'&lt;/code&gt;
-  &lt;/pre&gt;
+puts 'Hello World'&lt;/code&gt;&lt;br /&gt;
+  &lt;/pre&gt;&lt;/p&gt;
 &lt;/div&gt;
-
-
-Then install &lt;a href=&quot;http://developer.apple.com/technologies/xcode.html&quot;&gt;Xcode&lt;/a&gt;, I recommend downloading the latest version &lt;ins datetime=&quot;2010-04-30T17:45:15+00:00&quot;&gt;3.2.2 at this moment&lt;/ins&gt; from apple's website.
-
-If you are the only person using your computer, you can change the ownership of &lt;em&gt;/usr/local&lt;/em&gt; by doing a:
-&lt;div&gt;
-  &lt;pre&gt;
-    &lt;code class='sh'&gt;sudo chown -R $USER /usr/local&lt;/code&gt;
-  &lt;/pre&gt;
+&lt;p&gt;Then install &lt;a href=&quot;http://developer.apple.com/technologies/xcode.html&quot;&gt;Xcode&lt;/a&gt;, I recommend downloading the latest version 3.2.2 at this moment from apple&amp;#8217;s website.&lt;/p&gt;
+&lt;p&gt;If you are the only person using your computer, you can change the ownership of &lt;code&gt;/usr/local&lt;/code&gt; by doing a:&lt;br /&gt;
+&lt;div&gt;&lt;br /&gt;
+  &lt;pre&gt;&lt;br /&gt;
+    &lt;code class='sh'&gt;sudo chown -R $USER /usr/local&lt;/code&gt;&lt;br /&gt;
+  &lt;/pre&gt;&lt;/p&gt;
 &lt;/div&gt;
-
-
-Delete some folders:
-&lt;div&gt;
-  &lt;pre&gt;
+&lt;p&gt;Delete some folders:&lt;br /&gt;
+&lt;div&gt;&lt;br /&gt;
+  &lt;pre&gt;&lt;br /&gt;
     &lt;code class='sh'&gt;rm -rf /usr/local/include
-rm -rf /usr/local/lib&lt;/code&gt;
-  &lt;/pre&gt;
+rm -rf /usr/local/lib&lt;/code&gt;&lt;br /&gt;
+  &lt;/pre&gt;&lt;/p&gt;
 &lt;/div&gt;
-
-
-After that you can start playing around with homebrew i.e.
-&lt;div&gt;
-  &lt;pre&gt;
-    &lt;code class='sh'&gt;brew install wget&lt;/code&gt;
-  &lt;/pre&gt;
+&lt;p&gt;After that you can start playing around with homebrew i.e.&lt;br /&gt;
+&lt;div&gt;&lt;br /&gt;
+  &lt;pre&gt;&lt;br /&gt;
+    &lt;code class='sh'&gt;brew install wget&lt;/code&gt;&lt;br /&gt;
+  &lt;/pre&gt;&lt;/p&gt;
 &lt;/div&gt;
-
-I install most if not all of my stuff from brew now, even mysql and other things that I would rather not get from port.
-&lt;strong&gt;Warning: do not remove your system's &lt;em&gt;/usr/bin/ruby&lt;/em&gt; since brew depends on it.&lt;/strong&gt;
-
-&lt;h3&gt;Let's move to rvm installation now&lt;/h3&gt;
-(&lt;a href=&quot;http://rvm.beginrescueend.com/rvm/install/&quot;&gt;&lt;em&gt;official installation instructions&lt;/em&gt;&lt;/a&gt;)
-
-To Install/update from the github repository, which they recommend, run:
-&lt;div&gt;
-  &lt;pre&gt;
-    &lt;code class='sh'&gt;bash &amp;lt; &amp;lt;( curl 'http://rvm.beginrescueend.com/releases/rvm-install-head' )&lt;/code&gt;
-  &lt;/pre&gt;
+&lt;p&gt;I install most if not all of my stuff from brew now, even mysql and other things that I would rather not get from port.&lt;br /&gt;
+&lt;strong&gt;Warning:&lt;/strong&gt; do not remove your system&amp;#8217;s &lt;code&gt;/usr/bin/ruby&lt;/code&gt; since brew depends on it.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Let&amp;#8217;s move to rvm installation now&lt;/strong&gt;&lt;br /&gt;
+(&lt;a href=&quot;http://rvm.beginrescueend.com/rvm/install&quot;&gt;&lt;em&gt;official installation instructions&lt;/em&gt;&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;To Install/update from the github repository, which they recommend, run:&lt;br /&gt;
+&lt;div&gt;&lt;br /&gt;
+  &lt;pre&gt;&lt;br /&gt;
+    &lt;code class='sh'&gt;bash &amp;amp;lt; &amp;amp;lt;( curl 'http://rvm.beginrescueend.com/releases/rvm-install-head' )&lt;/code&gt;&lt;br /&gt;
+  &lt;/pre&gt;&lt;/p&gt;
 &lt;/div&gt;
-
-
-I had a version of &lt;abbr title=&quot;Ruby Enterprise Edition&quot;&gt;ree&lt;/abbr&gt; installed in /opt, so I just deleted it, I recommend that you do the same.
-
-Add this to your &lt;em&gt;.bash_profile&lt;/em&gt; or &lt;em&gt;.bash_rc&lt;/em&gt; file, whichever you use.
-&lt;div&gt;
-  &lt;pre&gt;
-    &lt;code class='sh'&gt;source ~/.rvm/scripts/rvm&lt;/code&gt;
-  &lt;/pre&gt;
+&lt;p&gt;I had a version of ree installed in /opt, so I just deleted it, I recommend that you do the same.&lt;/p&gt;
+&lt;p&gt;Add this to your &lt;code&gt;.bash_profile&lt;/code&gt; or &lt;code&gt;.bash_rc&lt;/code&gt; file, whichever you use.&lt;br /&gt;
+&lt;div&gt;&lt;br /&gt;
+  &lt;pre&gt;&lt;br /&gt;
+    &lt;code class='sh'&gt;source ~/.rvm/scripts/rvm&lt;/code&gt;&lt;br /&gt;
+  &lt;/pre&gt;&lt;/p&gt;
 &lt;/div&gt;
-
-They advise you to put it at the end of it, and to make sure you have no &lt;em&gt;return&lt;/em&gt;s inside your file.
-
-I have a reload function in my file so I just ran reload
-&lt;div&gt;
-  &lt;pre&gt;
-    &lt;code class='sh'&gt;reload () { source ~/.bash_profile }&lt;/code&gt;
-  &lt;/pre&gt;
+&lt;p&gt;They advise you to put it at the end of it, and to make sure you have no @return@s inside your file.&lt;/p&gt;
+&lt;p&gt;I have a reload function in my file so I just ran reload&lt;br /&gt;
+&lt;div&gt;&lt;br /&gt;
+  &lt;pre&gt;&lt;br /&gt;
+    &lt;code class='sh'&gt;reload () { source ~/.bash_profile }&lt;/code&gt;&lt;br /&gt;
+  &lt;/pre&gt;&lt;/p&gt;
 &lt;/div&gt;
-
-but you have to &lt;em&gt;source&lt;/em&gt; again the files you usually load when you open a new terminal.
-
-Now start playing with rvm! Install your rubies!
-&lt;div&gt;
-  &lt;pre&gt;
+&lt;p&gt;but you have to &lt;code&gt;source&lt;/code&gt; again the files you usually load when you open a new terminal.&lt;/p&gt;
+&lt;p&gt;Now start playing with rvm! Install your rubies!&lt;br /&gt;
+&lt;div&gt;&lt;br /&gt;
+  &lt;pre&gt;&lt;br /&gt;
     &lt;code class='sh'&gt;rvm install ree
 rvm install 1.9.1
-rvm install 1.9.2-head&lt;/code&gt;
-  &lt;/pre&gt;
+rvm install 1.9.2-head&lt;/code&gt;&lt;br /&gt;
+  &lt;/pre&gt;&lt;/p&gt;
 &lt;/div&gt;
-
-
-Set the one you use the most as the default one, at work is ree:
-&lt;div&gt;
-  &lt;pre&gt;
-    &lt;code class='sh'&gt;rvm ree --default&lt;/code&gt;
-  &lt;/pre&gt;
+&lt;p&gt;Set the one you use the most as the default one, at work is ree:&lt;br /&gt;
+&lt;div&gt;&lt;br /&gt;
+  &lt;pre&gt;&lt;br /&gt;
+    &lt;code class='sh'&gt;rvm ree --default&lt;/code&gt;&lt;br /&gt;
+  &lt;/pre&gt;&lt;/p&gt;
 &lt;/div&gt;
-
-
-Everytime you open a new terminal, it should be using the default rvm ruby, but to make you might want to add the rvm-prompt feature to your default PS1. Add &lt;em&gt;~/.rvm/bin/rvm-prompt i v&lt;/em&gt; to your PS1 variable, something like:
-&lt;div&gt;
-  &lt;pre&gt;
+&lt;p&gt;Everytime you open a new terminal, it should be using the default rvm ruby, but to make you might want to add the rvm-prompt feature to your default PS1. Add &lt;code&gt;~/.rvm/bin/rvm-prompt i v&lt;/code&gt; to your PS1 variable, something like:&lt;br /&gt;
+&lt;div&gt;&lt;br /&gt;
+  &lt;pre&gt;&lt;br /&gt;
     &lt;code class='sh'&gt;# a fancy ps1
-export PS1=&amp;quot;\e[1;33m\u\e[0m|\e[1;32m\h\e[0m \e[1;34m\w\e[0m |\e[33m$(~/.rvm/bin/rvm-prompt i v)\e[0m|\n\$ &amp;quot;&lt;/code&gt;
-  &lt;/pre&gt;
+export PS1=&amp;amp;quot;\e[1;33m\u\e[0m|\e[1;32m\h\e[0m \e[1;34m\w\e[0m |\e[33m$(~/.rvm/bin/rvm-prompt i v)\e[0m|\n\$ &amp;amp;quot;&lt;/code&gt;&lt;br /&gt;
+  &lt;/pre&gt;&lt;/p&gt;
 &lt;/div&gt;
-
-
-If you want to install a gem for all of your rubies run
-&lt;div&gt;
-  &lt;pre&gt;
-    &lt;code class='sh'&gt;rvm gem install gemname&lt;/code&gt;
-  &lt;/pre&gt;
+&lt;p&gt;If you want to install a gem for all of your rubies run&lt;br /&gt;
+&lt;div&gt;&lt;br /&gt;
+  &lt;pre&gt;&lt;br /&gt;
+    &lt;code class='sh'&gt;rvm gem install gemname&lt;/code&gt;&lt;br /&gt;
+  &lt;/pre&gt;&lt;/p&gt;
 &lt;/div&gt;
-
-if not, you just use your regular gem to install stuff (it should be using the specific gem for your chosen ruby - as you can see below).
-&lt;div&gt;
-  &lt;pre&gt;
+&lt;p&gt;if not, you just use your regular gem to install stuff (it should be using the specific gem for your chosen ruby &amp;#8211; as you can see below).&lt;br /&gt;
+&lt;div&gt;&lt;br /&gt;
+  &lt;pre&gt;&lt;br /&gt;
     &lt;code class='sh'&gt;$ which ruby
 /Users/jao/.rvm/rubies/ree-1.8.7-2010.01/bin/ruby
 $ which gem
-/Users/jao/.rvm/rubies/ree-1.8.7-2010.01/bin/gem&lt;/code&gt;
-  &lt;/pre&gt;
+/Users/jao/.rvm/rubies/ree-1.8.7-2010.01/bin/gem&lt;/code&gt;&lt;br /&gt;
+  &lt;/pre&gt;&lt;/p&gt;
 &lt;/div&gt;
-
-
-I think that sums it up. Have fun!
-And ask questions or say if something is wrong in the comments.
-</content>
+&lt;p&gt;I think that sums it up. Have fun!&lt;br /&gt;
+And ask questions or say if something is wrong in the comments.&lt;/p&gt;</content>
  </entry>
  
  <entry>
@@ -250,18 +207,15 @@ And ask questions or say if something is wrong in the comments.
    <link href="http://jpcamargo.com/2010/04/07/surfer+girl"/>
    <updated>2010-04-07T00:00:00-03:00</updated>
    <id>http://jpcamargo.com/2010/04/07/surfer girl</id>
-   <content type="html">So, I wake up with the phone ringing, I pick up and it's a girl I haven't seen or heard of in the past 15 years. I was so sleepy I couldn't really understand or remember what she was saying. I remember her though, I think her name was Mirella, she was blonde and cute.
-
-I met her back in the day when I used to spend most vacations, holidays and breaks in a beach called 'Guaecá'... I believe she was my friend's cousin's friend, but that is irrelevant.
-
-She was being really nice even if I couldn't understand her, until suddenly the phone started to fail. I figured I should try hitting the handset a couple times when I see a disconnected wire, so I say &quot;the phone is not working, I can't hear you!&quot; while trying to fix it. And 'voi là' I can hear her again and I feel happy about it, still can't get what she is saying though.
-
-Apparently I can't focus well enough to actually listen to her, so I pay attention to the phone instead, and only then I realize two things:
-1. it was one of those old &lt;a href=&quot;http://en.wikipedia.org/wiki/Rotary_dial&quot;&gt;rotary phones&lt;/a&gt;;
-2. it was a dream...
-
-So I wake up &lt;em&gt;again&lt;/em&gt;, and start typing this on my phone.
-</content>
+   <content type="html">&lt;p&gt;So, I wake up with the phone ringing, I pick up and it&amp;#8217;s a girl I haven&amp;#8217;t seen or heard of in the past 15 years. I was so sleepy I couldn&amp;#8217;t really understand or remember what she was saying. I remember her though, I think her name was Mirella, she was blonde and cute.&lt;/p&gt;
+&lt;p&gt;I met her back in the day when I used to spend most vacations, holidays and breaks in a beach called &amp;#8216;Guaecá&amp;#8217;&amp;#8230; I believe she was my friend&amp;#8217;s cousin&amp;#8217;s friend, but that is irrelevant.&lt;/p&gt;
+&lt;p&gt;She was being really nice even if I couldn&amp;#8217;t understand her, until suddenly the phone started to fail. I figured I should try hitting the handset a couple times when I see a disconnected wire, so I say &amp;#8220;the phone is not working, I can&amp;#8217;t hear you!&amp;#8221; while trying to fix it. And &amp;#8216;voi là&amp;#8217; I can hear her again and I feel happy about it, still can&amp;#8217;t get what she is saying though.&lt;/p&gt;
+&lt;p&gt;Apparently I can&amp;#8217;t focus well enough to actually listen to her, so I pay attention to the phone instead, and only then I realize two things:&lt;/p&gt;
+&lt;ol&gt;
+	&lt;li&gt;it was one of those old &lt;a href=&quot;http://en.wikipedia.org/wiki/Rotary_dial&quot;&gt;rotary phones&lt;/a&gt;;&lt;/li&gt;
+	&lt;li&gt;it was a dream&amp;#8230;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;So I wake up &lt;em&gt;again&lt;/em&gt;, and start typing this on my phone.&lt;/p&gt;</content>
  </entry>
  
  <entry>
@@ -269,23 +223,15 @@ So I wake up &lt;em&gt;again&lt;/em&gt;, and start typing this on my phone.
    <link href="http://jpcamargo.com/2010/03/08/beer+tasting"/>
    <updated>2010-03-08T00:00:00-03:00</updated>
    <id>http://jpcamargo.com/2010/03/08/beer tasting</id>
-   <content type="html">In January, a friend and I started a long process of studying the art of the beer. We went through approximately 150 different beers since then, and this last weekend we hosted our first beer tasting event. 
-
-It was a little crash course for a small group of friends, and we served 23 different beers, some were very rare (or at least hard to find), and some were new even to both of us.
-
-We made a simple tasting form for each beer, and gave them to everyone that joined us there.
-&lt;img src=&quot;http://jpcamargo.com/wp-content/uploads/2010/03/forms.jpg&quot; alt=&quot;Preparations&quot; title=&quot;Preparations&quot; width=&quot;500&quot; height=&quot;375&quot; class=&quot;aligncenter size-full wp-image-288&quot; /&gt;
-
-And a few hours later, all the bottles were empty, people were very happy and surprised with all the details they could now look for anytime they want to try a new beer, or even &quot;judge&quot; one of the many beers they were already used to.
-&lt;img src=&quot;http://jpcamargo.com/wp-content/uploads/2010/03/empty_bottles.jpg&quot; alt=&quot;Used bottles&quot; title=&quot;Used bottles&quot; width=&quot;490&quot; height=&quot;200&quot; class=&quot;aligncenter size-full wp-image-287&quot; /&gt;
-
-Of course, this whole project will soon become an online catalog, and maybe one day even specific apps for a smartphone or two.
-
-&lt;h3&gt;Photos from the event&lt;/h3&gt;
-[flickr album=72157623578643718 num=40 size=Square]
-
-source: &lt;a href=&quot;http://www.flickr.com/photos/jao/sets/72157623578643718/&quot;&gt;flickr album&lt;/a&gt;
-</content>
+   <content type="html">&lt;p&gt;In January, a friend and I started a long process of studying the art of the beer. We went through approximately 150 different beers since then, and this last weekend we hosted our first beer tasting event.&lt;/p&gt;
+&lt;p&gt;It was a little crash course for a small group of friends, and we served 23 different beers, some were very rare (or at least hard to find), and some were new even to both of us.&lt;/p&gt;
+&lt;p&gt;We made a simple tasting form for each beer, and gave them to everyone that joined us there.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://jpcamargo.com/wp-content/uploads/2010/03/forms.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;And a few hours later, all the bottles were empty, people were very happy and surprised with all the details they could now look for anytime they want to try a new beer, or even &amp;#8220;judge&amp;#8221; one of the many beers they were already used to.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://jpcamargo.com/wp-content/uploads/2010/03/empty_bottles.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Of course, this whole project will soon become an online catalog, and maybe one day even specific apps for a smartphone or two.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Photos from the event&lt;/strong&gt;&lt;br /&gt;
+source: &lt;a href=&quot;http://www.flickr.com/photos/jao/sets/72157623578643718/&quot;&gt;flickr album&lt;/a&gt;&lt;/p&gt;</content>
  </entry>
  
  <entry>
