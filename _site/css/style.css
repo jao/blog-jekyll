@@ -1,0 +1,52 @@
+/* RESET DEFAULT */
+*, html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h5, h5, h6, pre, form, label, fieldset, input, p, blockquote, th, td {margin:0; padding:0;}
+address, caption, cite, code, dfn, em, strong, th, var {font-style:normal; font-weight:normal;}
+h1, h2, h3, h5, h5, h6 {font-size:100%; font-weight:bold;}
+table {border-collapse:collapse; border-spacing:0;}
+fieldset, img {border:0;}
+ol, ul, li {list-style:none;}
+caption, th {text-align:left;}
+q:before, q:after {content:'';}
+strong {font-weight:bold;}
+em {font-style:italic;}
+ol, ul, li {list-style:none;}
+* a {position:relative;}
+a {outline:none;}
+a img {border:none;}
+
+/* COLORS */
+body {background:#D3CDB5; color:#454128; font-family:helvetica, sans serif;}
+
+a:link, a:visited, a:active {color:#79766C; text-decoration:none;}
+a:hover {color:#FFFFCC; background-color:#79766C;}
+
+header, footer {background:#ACA78C; padding:10px; border-color:#454128; clear:both;}
+header {border-bottom:1px solid; text-align:right; margin-bottom:20px;}
+footer {border-top:1px solid;}
+header section, footer section {width:900px; margin:auto;}
+
+header h1 {text-transform:uppercase; font-size:32px; color:#F7F2DA; margin-bottom:-28px; font-family:Impact, fantasy; text-shadow:1px 1px 1px #454128;}
+
+#content {padding:10px 25px 10px 25px; margin:auto; width:900px;}
+#content:after {content:' '; clear:both;}
+
+article, aside {background:#F7F2DA; padding:5px 10px 10px 10px; border:1px solid #454128; border-radius:0px 3px 0px 3px;}
+article {width:630px; float:left; margin-bottom:20px;}
+article h2 a:link, article h2 a:visited {color:#454128!important;}
+article h2 {margin:0px -5px 5px -5px; padding:5px; border:1px solid #454128; background:#D3CDB5; border-radius:0px 3px 0px 3px;}
+article h2 date {font-size:11px; float:right; margin-top:3px;}
+article p {margin-bottom:10px;}
+article ul {margin:15px;}
+article li {list-style:disc; margin-left:10px;}
+
+aside {width:220px; float:right;}
+aside h3 {margin:0px -5px 5px -5px; padding:5px; border:1px solid #454128; background:#D3CDB5; border-radius:0px 3px 0px 3px;}
+aside ul {margin:5px;}
+
+
+
+.bg-preto{background-color:#000000;}
+.bg-1{background-color:#454128;}
+.bg-2{background-color:#ACA78C;}
+.bg-3{background-color:#D3CDB5;}
+.bg-4{background-color:#F7F2DA;}

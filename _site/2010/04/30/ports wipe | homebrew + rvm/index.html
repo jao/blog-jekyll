@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>jp camargo - web developer</title>
+<link rel="stylesheet" href="/css/style.css" type="text/css" media="screen, projection" />
+</head>
+<body>
+<section id="wrapper">
+  <header>
+    <section>
+      <h1>jpcamargo.com</h1>
+    </section>
+  </header>
+  <section id="content">
+    <article>
+  <h2>ports wipe | homebrew + rvm <date>30/04/2010</date></h2>
+  Recently I've heard about <a href="http://twitter.com/mxcl">Max Howell</a>'s <a href="http://mxcl.github.com/homebrew/"><strong>homebrew</strong></a> and Wayne E. Seguin's <a href="http://rvm.beginrescueend.com/"><abbr title="Rails Version Manager"><strong>rvm</strong></abbr></a> from a friend (<a href="http://rodrigofranco.com">caffo</a>), and hearing that they were both pretty cool, I decided to give them a shot.
+
+So if, like me, you are curious about these tools, I'll post what I did to install them.
+
+First I made backups (by moving some folders around)
+<div>
+  <pre>
+    <code class='sh'>mv ~/.gem ~/gems-old
+sudo mv /opt/local ~/macports-old</code>
+  </pre>
+</div>
+
+
+You could also install a gem called 'rubygems_snapshot' and do a
+<div>
+  <pre>
+    <code class='sh'>gem snapshot export ~/my_gem_list.yml</code>
+  </pre>
+</div>
+
+or a simple
+<div>
+  <pre>
+    <code class='sh'>gem list &gt; ~/gem_list.txt</code>
+  </pre>
+</div>
+
+and just plain delete your user gem repository
+<div>
+  <pre>
+    <code class='sh'>rm -rf ~/.gem/</code>
+  </pre>
+</div>
+
+Of course I am assuming you were installing them in your home directory, why wouldn't you be?
+
+But if by any chance you have gems installed all over the place you could try running this instead (since this would remove the applicable executables as well):
+<div>
+  <pre>
+    <code class='sh'>sudo gem list | awk '{print $1}' | xargs sudo gem uninstall -a -x -i</code>
+  </pre>
+</div>
+
+
+Now let's get started.
+
+<h3>Installing homebrew</h3>
+"_official installation instructions_":http://wiki.github.com/mxcl/homebrew/installation
+
+Start by running:
+<div>
+  <pre>
+    <code class='sh'>ruby &lt; &lt;( curl 'http://gist.github.com/raw/323731/25f99360c7de3f72027d8fd07cb369b1c8756ea6/install_homebrew.rb' )</code>
+  </pre>
+</div>
+
+or download it from <a href="http://gist.github.com/323731">here</a> and run it yourself.
+
+If by any chance you don't trust or know what that does, you can test it by running the code below that calls this <a href="http://gist.github.com/385387">simple and safe ruby script</a> first.
+<div>
+  <pre>
+    <code class='sh'>ruby &lt; &lt;( curl 'http://gist.github.com/raw/385387/0cacf4231fceb621c987221ee0aaa380be2bca5d/testing_download_and_run.rb' )</code>
+  </pre>
+</div>
+
+
+If you are curious, this is the source of that gist:
+<div>
+  <pre>
+    <code class='sh'>#!/usr/bin/env ruby
+puts 'Hello World'</code>
+  </pre>
+</div>
+
+
+Then install <a href="http://developer.apple.com/technologies/xcode.html">Xcode</a>, I recommend downloading the latest version <ins datetime="2010-04-30T17:45:15+00:00">3.2.2 at this moment</ins> from apple's website.
+
+If you are the only person using your computer, you can change the ownership of <em>/usr/local</em> by doing a:
+<div>
+  <pre>
+    <code class='sh'>sudo chown -R $USER /usr/local</code>
+  </pre>
+</div>
+
+
+Delete some folders:
+<div>
+  <pre>
+    <code class='sh'>rm -rf /usr/local/include
+rm -rf /usr/local/lib</code>
+  </pre>
+</div>
+
+
+After that you can start playing around with homebrew i.e.
+<div>
+  <pre>
+    <code class='sh'>brew install wget</code>
+  </pre>
+</div>
+
+I install most if not all of my stuff from brew now, even mysql and other things that I would rather not get from port.
+<strong>Warning: do not remove your system's <em>/usr/bin/ruby</em> since brew depends on it.</strong>
+
+<h3>Let's move to rvm installation now</h3>
+(<a href="http://rvm.beginrescueend.com/rvm/install/"><em>official installation instructions</em></a>)
+
+To Install/update from the github repository, which they recommend, run:
+<div>
+  <pre>
+    <code class='sh'>bash &lt; &lt;( curl 'http://rvm.beginrescueend.com/releases/rvm-install-head' )</code>
+  </pre>
+</div>
+
+
+I had a version of <abbr title="Ruby Enterprise Edition">ree</abbr> installed in /opt, so I just deleted it, I recommend that you do the same.
+
+Add this to your <em>.bash_profile</em> or <em>.bash_rc</em> file, whichever you use.
+<div>
+  <pre>
+    <code class='sh'>source ~/.rvm/scripts/rvm</code>
+  </pre>
+</div>
+
+They advise you to put it at the end of it, and to make sure you have no <em>return</em>s inside your file.
+
+I have a reload function in my file so I just ran reload
+<div>
+  <pre>
+    <code class='sh'>reload () { source ~/.bash_profile }</code>
+  </pre>
+</div>
+
+but you have to <em>source</em> again the files you usually load when you open a new terminal.
+
+Now start playing with rvm! Install your rubies!
+<div>
+  <pre>
+    <code class='sh'>rvm install ree
+rvm install 1.9.1
+rvm install 1.9.2-head</code>
+  </pre>
+</div>
+
+
+Set the one you use the most as the default one, at work is ree:
+<div>
+  <pre>
+    <code class='sh'>rvm ree --default</code>
+  </pre>
+</div>
+
+
+Everytime you open a new terminal, it should be using the default rvm ruby, but to make you might want to add the rvm-prompt feature to your default PS1. Add <em>~/.rvm/bin/rvm-prompt i v</em> to your PS1 variable, something like:
+<div>
+  <pre>
+    <code class='sh'># a fancy ps1
+export PS1=&quot;\e[1;33m\u\e[0m|\e[1;32m\h\e[0m \e[1;34m\w\e[0m |\e[33m$(~/.rvm/bin/rvm-prompt i v)\e[0m|\n\$ &quot;</code>
+  </pre>
+</div>
+
+
+If you want to install a gem for all of your rubies run
+<div>
+  <pre>
+    <code class='sh'>rvm gem install gemname</code>
+  </pre>
+</div>
+
+if not, you just use your regular gem to install stuff (it should be using the specific gem for your chosen ruby - as you can see below).
+<div>
+  <pre>
+    <code class='sh'>$ which ruby
+/Users/jao/.rvm/rubies/ree-1.8.7-2010.01/bin/ruby
+$ which gem
+/Users/jao/.rvm/rubies/ree-1.8.7-2010.01/bin/gem</code>
+  </pre>
+</div>
+
+
+I think that sums it up. Have fun!
+And ask questions or say if something is wrong in the comments.
+
+</article>
+
+    
+    <aside>
+      <h3>projects</h3>
+      <ul>
+      
+        <li><a href="/2010/05/10/termite-a%20command%20line%20time%20tracker">Termite - a command line time tracker</a></li>
+      
+        <li><a href="/2009/10/30/bash%2C%20an%20adium%20message%20style">Bash, an Adium message style</a></li>
+      
+      </ul>
+
+      <h3>code</h3>
+      <ul>
+      
+        <li><a href="/2010/05/10/termite-a%20command%20line%20time%20tracker">Termite - a command line time tracker</a></li>
+      
+        <li><a href="/2010/04/30/ports%20wipe%20%7C%20homebrew%20%2B%20rvm">ports wipe | homebrew + rvm</a></li>
+      
+        <li><a href="/2009/10/30/bash%2C%20an%20adium%20message%20style">Bash, an Adium message style</a></li>
+      
+        <li><a href="/2009/10/28/htc%20hero%20%2B%20android">htc hero + android</a></li>
+      
+        <li><a href="/2009/09/21/git%2C%20pushing%20to%20multiple%20repositories">git, pushing to multiple repositories</a></li>
+      
+      </ul>
+
+      <h3>wishlist</h3>
+      <ul>
+      
+        <li><a href="/2009/12/07/wtb%20rebel%20xsi">WTB Rebel XSi</a></li>
+      
+        <li><a href="/2009/11/18/xtreamer">xtreamer</a></li>
+      
+        <li><a href="/2009/10/19/bloom%20frame">bloom frame</a></li>
+      
+        <li><a href="/2009/10/16/di-lb604%204-port%20load%20balancing%20router">di-lb604 4-port load balancing router</a></li>
+      
+        <li><a href="/2009/10/09/wishlist%20start">wishlist start</a></li>
+      
+      </ul>
+    </aside>
+  </section>
+  <footer>
+    <section>
+      <h2>archive</h2>
+      <ul>
+      
+        <li><span id="date">04/01/2011</span> &raquo; <a href="/2011/01/04/2000eleven">2000ELEVEN</a></li>
+      
+        <li><span id="date">10/05/2010</span> &raquo; <a href="/2010/05/10/termite-a%20command%20line%20time%20tracker">Termite - a command line time tracker</a></li>
+      
+        <li><span id="date">30/04/2010</span> &raquo; <a href="/2010/04/30/ports%20wipe%20%7C%20homebrew%20%2B%20rvm">ports wipe | homebrew + rvm</a></li>
+      
+        <li><span id="date">07/04/2010</span> &raquo; <a href="/2010/04/07/surfer%20girl">Surfer girl</a></li>
+      
+        <li><span id="date">08/03/2010</span> &raquo; <a href="/2010/03/08/beer%20tasting">beer tasting</a></li>
+      
+        <li><span id="date">26/01/2010</span> &raquo; <a href="/2010/01/26/army%20brats">army brats</a></li>
+      
+        <li><span id="date">18/01/2010</span> &raquo; <a href="/2010/01/18/my%20worst%20nightmare">my worst nightmare</a></li>
+      
+        <li><span id="date">24/12/2009</span> &raquo; <a href="/2009/12/24/shot%20in%20the%20head">shot in the head</a></li>
+      
+        <li><span id="date">07/12/2009</span> &raquo; <a href="/2009/12/07/wtb%20rebel%20xsi">WTB Rebel XSi</a></li>
+      
+        <li><span id="date">24/11/2009</span> &raquo; <a href="/2009/11/24/wow%20turns%205%2C%20warcraft%2015">WoW turns 5, Warcraft 15</a></li>
+      
+        <li><span id="date">18/11/2009</span> &raquo; <a href="/2009/11/18/xtreamer">xtreamer</a></li>
+      
+        <li><span id="date">17/11/2009</span> &raquo; <a href="/2009/11/17/2012">2012</a></li>
+      
+        <li><span id="date">05/11/2009</span> &raquo; <a href="/2009/11/05/passandomal.com">passandomal.com</a></li>
+      
+        <li><span id="date">31/10/2009</span> &raquo; <a href="/2009/10/31/happy%20halloween">happy halloween</a></li>
+      
+        <li><span id="date">30/10/2009</span> &raquo; <a href="/2009/10/30/bash%2C%20an%20adium%20message%20style">Bash, an Adium message style</a></li>
+      
+        <li><span id="date">28/10/2009</span> &raquo; <a href="/2009/10/28/htc%20hero%20%2B%20android">htc hero + android</a></li>
+      
+        <li><span id="date">28/10/2009</span> &raquo; <a href="/2009/10/28/eclair%20for%20hero%21">eclair for hero!</a></li>
+      
+        <li><span id="date">28/10/2009</span> &raquo; <a href="/2009/10/28/a%20wp%20android%20app">A wp android app</a></li>
+      
+        <li><span id="date">27/10/2009</span> &raquo; <a href="/2009/10/27/android%20%2B%20vlc">android + vlc</a></li>
+      
+        <li><span id="date">26/10/2009</span> &raquo; <a href="/2009/10/26/xkcd%20%3D%20win">xkcd = win</a></li>
+      
+        <li><span id="date">26/10/2009</span> &raquo; <a href="/2009/10/26/ruby%3A%20print%20in%20the%20same%20line">ruby: print in the same line</a></li>
+      
+        <li><span id="date">20/10/2009</span> &raquo; <a href="/2009/10/20/field%20trip">field trip</a></li>
+      
+        <li><span id="date">20/10/2009</span> &raquo; <a href="/2009/10/20/dreamcatcher">dreamcatcher</a></li>
+      
+        <li><span id="date">19/10/2009</span> &raquo; <a href="/2009/10/19/bloom%20frame">bloom frame</a></li>
+      
+        <li><span id="date">16/10/2009</span> &raquo; <a href="/2009/10/16/di-lb604%204-port%20load%20balancing%20router">di-lb604 4-port load balancing router</a></li>
+      
+        <li><span id="date">09/10/2009</span> &raquo; <a href="/2009/10/09/wishlist%20start">wishlist start</a></li>
+      
+        <li><span id="date">08/10/2009</span> &raquo; <a href="/2009/10/08/iphone%20or%20android%3F">iphone or android?</a></li>
+      
+        <li><span id="date">07/10/2009</span> &raquo; <a href="/2009/10/07/on%20tv">on tv</a></li>
+      
+        <li><span id="date">03/10/2009</span> &raquo; <a href="/2009/10/03/infestation">infestation</a></li>
+      
+        <li><span id="date">02/10/2009</span> &raquo; <a href="/2009/10/02/lang.new">Lang.new</a></li>
+      
+        <li><span id="date">30/09/2009</span> &raquo; <a href="/2009/09/30/bbc%27s%20online%20zoo">bbc's online zoo</a></li>
+      
+        <li><span id="date">29/09/2009</span> &raquo; <a href="/2009/09/29/google%20profile">google profile</a></li>
+      
+        <li><span id="date">24/09/2009</span> &raquo; <a href="/2009/09/24/home%20computing">home computing</a></li>
+      
+        <li><span id="date">22/09/2009</span> &raquo; <a href="/2009/09/22/car%20free%20day">car free day</a></li>
+      
+        <li><span id="date">21/09/2009</span> &raquo; <a href="/2009/09/21/git%2C%20pushing%20to%20multiple%20repositories">git, pushing to multiple repositories</a></li>
+      
+        <li><span id="date">21/09/2009</span> &raquo; <a href="/2009/09/21/dual%20wan%20routers">dual wan routers</a></li>
+      
+      </ul>
+    </section>
+  </footer>
+</section>
+
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11347736-1']);
+_gaq.push(['_trackPageview']);
+(function(){
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,768 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>jp camargo</title>
+ <link href="http://jpcamargo.com/atom.xml" rel="self"/>
+ <link href="http://jpcamargo.com/"/>
+ <updated>2011-05-09T18:11:11-03:00</updated>
+ <id>http://jpcamargo.com/</id>
+ <author>
+   <name>João Paulo Camargo</name>
+   <email>mailto+blog@jpcamargo.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>2000ELEVEN</title>
+   <link href="http://jpcamargo.com/2011/01/04/2000eleven"/>
+   <updated>2011-01-04T00:00:00-02:00</updated>
+   <id>http://jpcamargo.com/2011/01/04/2000eleven</id>
+   <content type="html">&lt;p&gt;A new year has begun, and as usual new commitments are made, new projects are born.&lt;/p&gt;
+&lt;p&gt;So, following that rule, I hereby promise to try to update this site more often. And here are a few other things I want to do:&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;rebuild my slicehost virtual machine (maybe even change my host service), I&amp;#8217;ve been having issues with the current setup for a long time;&lt;/li&gt;
+	&lt;li&gt;&lt;del&gt;change the android build of my htc hero® or buy a new mobile device&lt;/del&gt;;&lt;/li&gt;
+	&lt;li&gt;change the &lt;em&gt;cms&lt;/em&gt; from wordpress to one of my own;&lt;/li&gt;
+	&lt;li&gt;finally code my &lt;a href=&quot;http://code42.com.br&quot;&gt;&lt;em&gt;company&amp;#8217;s website&lt;/em&gt;&lt;/a&gt; properly &amp;#8211; today it is just a single plain html page with 8 lines of css &amp;#8211; I&amp;#8217;m lazy as hell, I know;&lt;/li&gt;
+	&lt;li&gt;port some projects to rails3, html5 and css3 &amp;#8211; even though some of those are not exactly ready;&lt;/li&gt;
+	&lt;li&gt;buy an AT car/truck or a harley davidson fatboy® or start walking a lot;&lt;/li&gt;
+	&lt;li&gt;buy new monitors, and make sure they can use a standard vesa mount so I can put them in the wall and save some desk space (stupid samsung);&lt;/li&gt;
+	&lt;li&gt;&lt;del&gt;drink beer&lt;/del&gt;;&lt;/li&gt;
+	&lt;li&gt;go to Ireland/England;&lt;/li&gt;
+	&lt;li&gt;drink beer there;&lt;/li&gt;
+	&lt;li&gt;&lt;del&gt;go to Edu&amp;#8217;s wedding&lt;/del&gt;;&lt;/li&gt;
+	&lt;li&gt;&lt;del&gt;drink beer there&lt;/del&gt;;&lt;/li&gt;
+	&lt;li&gt;plant a tree;&lt;/li&gt;
+	&lt;li&gt;drink beer there;&lt;/li&gt;
+	&lt;li&gt;find a challenging job;&lt;/li&gt;
+	&lt;li&gt;kill deathwing;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And there you go. Let&amp;#8217;s see how many items of the list above I can actually accomplish&amp;#8230;&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Termite - a command line time tracker</title>
+   <link href="http://jpcamargo.com/2010/05/10/termite-a+command+line+time+tracker"/>
+   <updated>2010-05-10T00:00:00-03:00</updated>
+   <id>http://jpcamargo.com/2010/05/10/termite-a command line time tracker</id>
+   <content type="html">&lt;p&gt;Recently I felt the need to have some kind of time tracking tool, so I wrote a simple one in ruby. It requires only two gems to work (&amp;#8216;rubygems&amp;#8217; and &amp;#8216;sqlite3-ruby&amp;#8217;).&lt;/p&gt;
+&lt;p&gt;It is definitely a work in progress, but right now it is very easy to use and it gives reports for the last few days, last 3 weeks, and current month. Also, for mac users, it has the option to change your Adium statuses using osascript, with customizable status messages for a few situations.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://cl.ly/11ok/Screen_shot_2010-05-10_at_14.18.44.png&quot; title=&quot;termite report weekly&quot; alt=&quot;termite report weekly&quot; /&gt;&lt;br /&gt;
+weekly report&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://cl.ly/10uo/Screen_shot_2010-05-10_at_14.17.44.png&quot; title=&quot;termite report monthly&quot; alt=&quot;termite report monthly&quot; /&gt;&lt;br /&gt;
+monthly report&lt;/p&gt;
+&lt;p&gt;You can find the source code and installation instructions at github (&lt;a href=&quot;http://github.com/jao/termite&quot;&gt;http://github.com/jao/termite&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;I plan to add features like, defining projects and tags to the worked time, and exporting the reports to formats like pdf and csv.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>ports wipe | homebrew + rvm</title>
+   <link href="http://jpcamargo.com/2010/04/30/ports+wipe+%7C+homebrew+%2B+rvm"/>
+   <updated>2010-04-30T00:00:00-03:00</updated>
+   <id>http://jpcamargo.com/2010/04/30/ports wipe | homebrew + rvm</id>
+   <content type="html">Recently I've heard about &lt;a href=&quot;http://twitter.com/mxcl&quot;&gt;Max Howell&lt;/a&gt;'s &lt;a href=&quot;http://mxcl.github.com/homebrew/&quot;&gt;&lt;strong&gt;homebrew&lt;/strong&gt;&lt;/a&gt; and Wayne E. Seguin's &lt;a href=&quot;http://rvm.beginrescueend.com/&quot;&gt;&lt;abbr title=&quot;Rails Version Manager&quot;&gt;&lt;strong&gt;rvm&lt;/strong&gt;&lt;/abbr&gt;&lt;/a&gt; from a friend (&lt;a href=&quot;http://rodrigofranco.com&quot;&gt;caffo&lt;/a&gt;), and hearing that they were both pretty cool, I decided to give them a shot.
+
+So if, like me, you are curious about these tools, I'll post what I did to install them.
+
+First I made backups (by moving some folders around)
+&lt;div&gt;
+  &lt;pre&gt;
+    &lt;code class='sh'&gt;mv ~/.gem ~/gems-old
+sudo mv /opt/local ~/macports-old&lt;/code&gt;
+  &lt;/pre&gt;
+&lt;/div&gt;
+
+
+You could also install a gem called 'rubygems_snapshot' and do a
+&lt;div&gt;
+  &lt;pre&gt;
+    &lt;code class='sh'&gt;gem snapshot export ~/my_gem_list.yml&lt;/code&gt;
+  &lt;/pre&gt;
+&lt;/div&gt;
+
+or a simple
+&lt;div&gt;
+  &lt;pre&gt;
+    &lt;code class='sh'&gt;gem list &amp;gt; ~/gem_list.txt&lt;/code&gt;
+  &lt;/pre&gt;
+&lt;/div&gt;
+
+and just plain delete your user gem repository
+&lt;div&gt;
+  &lt;pre&gt;
+    &lt;code class='sh'&gt;rm -rf ~/.gem/&lt;/code&gt;
+  &lt;/pre&gt;
+&lt;/div&gt;
+
+Of course I am assuming you were installing them in your home directory, why wouldn't you be?
+
+But if by any chance you have gems installed all over the place you could try running this instead (since this would remove the applicable executables as well):
+&lt;div&gt;
+  &lt;pre&gt;
+    &lt;code class='sh'&gt;sudo gem list | awk '{print $1}' | xargs sudo gem uninstall -a -x -i&lt;/code&gt;
+  &lt;/pre&gt;
+&lt;/div&gt;
+
+
+Now let's get started.
+
+&lt;h3&gt;Installing homebrew&lt;/h3&gt;
+&quot;_official installation instructions_&quot;:http://wiki.github.com/mxcl/homebrew/installation
+
+Start by running:
+&lt;div&gt;
+  &lt;pre&gt;
+    &lt;code class='sh'&gt;ruby &amp;lt; &amp;lt;( curl 'http://gist.github.com/raw/323731/25f99360c7de3f72027d8fd07cb369b1c8756ea6/install_homebrew.rb' )&lt;/code&gt;
+  &lt;/pre&gt;
+&lt;/div&gt;
+
+or download it from &lt;a href=&quot;http://gist.github.com/323731&quot;&gt;here&lt;/a&gt; and run it yourself.
+
+If by any chance you don't trust or know what that does, you can test it by running the code below that calls this &lt;a href=&quot;http://gist.github.com/385387&quot;&gt;simple and safe ruby script&lt;/a&gt; first.
+&lt;div&gt;
+  &lt;pre&gt;
+    &lt;code class='sh'&gt;ruby &amp;lt; &amp;lt;( curl 'http://gist.github.com/raw/385387/0cacf4231fceb621c987221ee0aaa380be2bca5d/testing_download_and_run.rb' )&lt;/code&gt;
+  &lt;/pre&gt;
+&lt;/div&gt;
+
+
+If you are curious, this is the source of that gist:
+&lt;div&gt;
+  &lt;pre&gt;
+    &lt;code class='sh'&gt;#!/usr/bin/env ruby
+puts 'Hello World'&lt;/code&gt;
+  &lt;/pre&gt;
+&lt;/div&gt;
+
+
+Then install &lt;a href=&quot;http://developer.apple.com/technologies/xcode.html&quot;&gt;Xcode&lt;/a&gt;, I recommend downloading the latest version &lt;ins datetime=&quot;2010-04-30T17:45:15+00:00&quot;&gt;3.2.2 at this moment&lt;/ins&gt; from apple's website.
+
+If you are the only person using your computer, you can change the ownership of &lt;em&gt;/usr/local&lt;/em&gt; by doing a:
+&lt;div&gt;
+  &lt;pre&gt;
+    &lt;code class='sh'&gt;sudo chown -R $USER /usr/local&lt;/code&gt;
+  &lt;/pre&gt;
+&lt;/div&gt;
+
+
+Delete some folders:
+&lt;div&gt;
+  &lt;pre&gt;
+    &lt;code class='sh'&gt;rm -rf /usr/local/include
+rm -rf /usr/local/lib&lt;/code&gt;
+  &lt;/pre&gt;
+&lt;/div&gt;
+
+
+After that you can start playing around with homebrew i.e.
+&lt;div&gt;
+  &lt;pre&gt;
+    &lt;code class='sh'&gt;brew install wget&lt;/code&gt;
+  &lt;/pre&gt;
+&lt;/div&gt;
+
+I install most if not all of my stuff from brew now, even mysql and other things that I would rather not get from port.
+&lt;strong&gt;Warning: do not remove your system's &lt;em&gt;/usr/bin/ruby&lt;/em&gt; since brew depends on it.&lt;/strong&gt;
+
+&lt;h3&gt;Let's move to rvm installation now&lt;/h3&gt;
+(&lt;a href=&quot;http://rvm.beginrescueend.com/rvm/install/&quot;&gt;&lt;em&gt;official installation instructions&lt;/em&gt;&lt;/a&gt;)
+
+To Install/update from the github repository, which they recommend, run:
+&lt;div&gt;
+  &lt;pre&gt;
+    &lt;code class='sh'&gt;bash &amp;lt; &amp;lt;( curl 'http://rvm.beginrescueend.com/releases/rvm-install-head' )&lt;/code&gt;
+  &lt;/pre&gt;
+&lt;/div&gt;
+
+
+I had a version of &lt;abbr title=&quot;Ruby Enterprise Edition&quot;&gt;ree&lt;/abbr&gt; installed in /opt, so I just deleted it, I recommend that you do the same.
+
+Add this to your &lt;em&gt;.bash_profile&lt;/em&gt; or &lt;em&gt;.bash_rc&lt;/em&gt; file, whichever you use.
+&lt;div&gt;
+  &lt;pre&gt;
+    &lt;code class='sh'&gt;source ~/.rvm/scripts/rvm&lt;/code&gt;
+  &lt;/pre&gt;
+&lt;/div&gt;
+
+They advise you to put it at the end of it, and to make sure you have no &lt;em&gt;return&lt;/em&gt;s inside your file.
+
+I have a reload function in my file so I just ran reload
+&lt;div&gt;
+  &lt;pre&gt;
+    &lt;code class='sh'&gt;reload () { source ~/.bash_profile }&lt;/code&gt;
+  &lt;/pre&gt;
+&lt;/div&gt;
+
+but you have to &lt;em&gt;source&lt;/em&gt; again the files you usually load when you open a new terminal.
+
+Now start playing with rvm! Install your rubies!
+&lt;div&gt;
+  &lt;pre&gt;
+    &lt;code class='sh'&gt;rvm install ree
+rvm install 1.9.1
+rvm install 1.9.2-head&lt;/code&gt;
+  &lt;/pre&gt;
+&lt;/div&gt;
+
+
+Set the one you use the most as the default one, at work is ree:
+&lt;div&gt;
+  &lt;pre&gt;
+    &lt;code class='sh'&gt;rvm ree --default&lt;/code&gt;
+  &lt;/pre&gt;
+&lt;/div&gt;
+
+
+Everytime you open a new terminal, it should be using the default rvm ruby, but to make you might want to add the rvm-prompt feature to your default PS1. Add &lt;em&gt;~/.rvm/bin/rvm-prompt i v&lt;/em&gt; to your PS1 variable, something like:
+&lt;div&gt;
+  &lt;pre&gt;
+    &lt;code class='sh'&gt;# a fancy ps1
+export PS1=&amp;quot;\e[1;33m\u\e[0m|\e[1;32m\h\e[0m \e[1;34m\w\e[0m |\e[33m$(~/.rvm/bin/rvm-prompt i v)\e[0m|\n\$ &amp;quot;&lt;/code&gt;
+  &lt;/pre&gt;
+&lt;/div&gt;
+
+
+If you want to install a gem for all of your rubies run
+&lt;div&gt;
+  &lt;pre&gt;
+    &lt;code class='sh'&gt;rvm gem install gemname&lt;/code&gt;
+  &lt;/pre&gt;
+&lt;/div&gt;
+
+if not, you just use your regular gem to install stuff (it should be using the specific gem for your chosen ruby - as you can see below).
+&lt;div&gt;
+  &lt;pre&gt;
+    &lt;code class='sh'&gt;$ which ruby
+/Users/jao/.rvm/rubies/ree-1.8.7-2010.01/bin/ruby
+$ which gem
+/Users/jao/.rvm/rubies/ree-1.8.7-2010.01/bin/gem&lt;/code&gt;
+  &lt;/pre&gt;
+&lt;/div&gt;
+
+
+I think that sums it up. Have fun!
+And ask questions or say if something is wrong in the comments.
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Surfer girl</title>
+   <link href="http://jpcamargo.com/2010/04/07/surfer+girl"/>
+   <updated>2010-04-07T00:00:00-03:00</updated>
+   <id>http://jpcamargo.com/2010/04/07/surfer girl</id>
+   <content type="html">So, I wake up with the phone ringing, I pick up and it's a girl I haven't seen or heard of in the past 15 years. I was so sleepy I couldn't really understand or remember what she was saying. I remember her though, I think her name was Mirella, she was blonde and cute.
+
+I met her back in the day when I used to spend most vacations, holidays and breaks in a beach called 'Guaecá'... I believe she was my friend's cousin's friend, but that is irrelevant.
+
+She was being really nice even if I couldn't understand her, until suddenly the phone started to fail. I figured I should try hitting the handset a couple times when I see a disconnected wire, so I say &quot;the phone is not working, I can't hear you!&quot; while trying to fix it. And 'voi là' I can hear her again and I feel happy about it, still can't get what she is saying though.
+
+Apparently I can't focus well enough to actually listen to her, so I pay attention to the phone instead, and only then I realize two things:
+1. it was one of those old &lt;a href=&quot;http://en.wikipedia.org/wiki/Rotary_dial&quot;&gt;rotary phones&lt;/a&gt;;
+2. it was a dream...
+
+So I wake up &lt;em&gt;again&lt;/em&gt;, and start typing this on my phone.
+</content>
+ </entry>
+ 
+ <entry>
+   <title>beer tasting</title>
+   <link href="http://jpcamargo.com/2010/03/08/beer+tasting"/>
+   <updated>2010-03-08T00:00:00-03:00</updated>
+   <id>http://jpcamargo.com/2010/03/08/beer tasting</id>
+   <content type="html">In January, a friend and I started a long process of studying the art of the beer. We went through approximately 150 different beers since then, and this last weekend we hosted our first beer tasting event. 
+
+It was a little crash course for a small group of friends, and we served 23 different beers, some were very rare (or at least hard to find), and some were new even to both of us.
+
+We made a simple tasting form for each beer, and gave them to everyone that joined us there.
+&lt;img src=&quot;http://jpcamargo.com/wp-content/uploads/2010/03/forms.jpg&quot; alt=&quot;Preparations&quot; title=&quot;Preparations&quot; width=&quot;500&quot; height=&quot;375&quot; class=&quot;aligncenter size-full wp-image-288&quot; /&gt;
+
+And a few hours later, all the bottles were empty, people were very happy and surprised with all the details they could now look for anytime they want to try a new beer, or even &quot;judge&quot; one of the many beers they were already used to.
+&lt;img src=&quot;http://jpcamargo.com/wp-content/uploads/2010/03/empty_bottles.jpg&quot; alt=&quot;Used bottles&quot; title=&quot;Used bottles&quot; width=&quot;490&quot; height=&quot;200&quot; class=&quot;aligncenter size-full wp-image-287&quot; /&gt;
+
+Of course, this whole project will soon become an online catalog, and maybe one day even specific apps for a smartphone or two.
+
+&lt;h3&gt;Photos from the event&lt;/h3&gt;
+[flickr album=72157623578643718 num=40 size=Square]
+
+source: &lt;a href=&quot;http://www.flickr.com/photos/jao/sets/72157623578643718/&quot;&gt;flickr album&lt;/a&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>army brats</title>
+   <link href="http://jpcamargo.com/2010/01/26/army+brats"/>
+   <updated>2010-01-26T00:00:00-02:00</updated>
+   <id>http://jpcamargo.com/2010/01/26/army brats</id>
+   <content type="html">This was one of the coolest dreams ever, my friend Crash had just moved to a new apartment - close to some sort of dock - and the people that lived there were getting rid of military stuff.
+
+Suffice to say we took some amazing souvenirs, including a helmet from 1946 - that I saved to wear riding the harley I will eventually have, some rifle that I can't name right now - not even sure it was a real one, and a weird bat with the word &quot;japson&quot;(?) written on it.
+
+Oh, did I mention my friend had to wear a chastity belt? Yeah, this was t.m.i. even for a dream.
+</content>
+ </entry>
+ 
+ <entry>
+   <title>my worst nightmare</title>
+   <link href="http://jpcamargo.com/2010/01/18/my+worst+nightmare"/>
+   <updated>2010-01-18T00:00:00-02:00</updated>
+   <id>http://jpcamargo.com/2010/01/18/my worst nightmare</id>
+   <content type="html">For a good part of my life I had a dream that used to freak me out, &lt;del datetime=&quot;2010-01-18T17:51:06+00:00&quot;&gt;even&lt;/del&gt; specially when I was awake.
+
+It was basically a recurrent dream where I would be repeatedly crushed by a giant gear system (a cartoon like, flatten image of myself). There was no pain whatsoever, in fact, what really bothered me was the soundtrack, I can't really describe it very well, it was an endless loop with a very specific pattern, imagine some kind of techno beat with metallic sounds and lots of reverberation.
+
+The reason it freaked me out so much was because I recognized that pattern in people's speech patterns, or in construction site sounds, or in traffic sounds, or even in a &quot;silent&quot; room. It happened more often when I was sleep deprived or in a caffeine rush, or just plain tired.
+
+It would make me feel weird and inadequate at first, then some sort of panic, and soon enough sick to my stomach. Of course, once I recognized said pattern I would try to avoid it as much as I could because I simply could not break the loop in my head.
+
+To this day this will happen eventually, it is not as hard as it used to be when I was a kid or teenager, but it still freaks me enough that I need to almost go deaf listening to music to overcome the stupid pattern. And yes, I am writing this because it is happening today.
+</content>
+ </entry>
+ 
+ <entry>
+   <title>shot in the head</title>
+   <link href="http://jpcamargo.com/2009/12/24/shot+in+the+head"/>
+   <updated>2009-12-24T00:00:00-02:00</updated>
+   <id>http://jpcamargo.com/2009/12/24/shot in the head</id>
+   <content type="html">I was inside a building, the same where we organized the quakenet3 in, helping set up a new infrastructure for some reason. When he-who-shall-not-be-named walks in with a gun (a 9mm to be precise), points the gun to my head - what makes me laugh - and shoots me in the head. It hurts a lot, and I feel something dripping through the whole, but other than the pain (which I woke up with) is really strong.
+
+I start walking away, while other people still repair the electric system, and when I go to the other room, there is a party going on, I meet a girl that only speaks english and we kind of click, and I end up kissing another girl. And I decide to leave.
+
+It is sunny outside, and I meet another friend, emage, that now looks like a basketball player (really tall and strong with a shaved head - I think he was even dressed in similar clothing - when in fact he is skinny, and a little taller than me). He helps me out a lot, and I drive him home (the fact that I was shot still persists).
+
+Sometime later I wake up, and the pain sensation is still there.
+
+Weird.
+</content>
+ </entry>
+ 
+ <entry>
+   <title>WTB Rebel XSi</title>
+   <link href="http://jpcamargo.com/2009/12/07/wtb+rebel+xsi"/>
+   <updated>2009-12-07T00:00:00-02:00</updated>
+   <id>http://jpcamargo.com/2009/12/07/wtb rebel xsi</id>
+   <content type="html">I am looking for a new camera, and I've set my eyes on the Canon EOS Rebel XSi... It seems to be a good relationship in price x quality. It will be my first real digital slr, so most would agree that going with a canon or nikon is a good idea.
+
+I found it on &lt;a href=&quot;http://ebay.com&quot;&gt;ebay&lt;/a&gt;, with a bunch of accessories and shipping for 1200 usd (taxes not included), and in here - just the camera - for 1800 brl. Then I decided to check &lt;a href=&quot;http://bhphoto.com&quot;&gt;bhphoto&lt;/a&gt;, and the camera with some key accessories plus shipping and taxes* would go for 1700 usd.
+
+It's a hard decision, to be honest, but it seems like traveling to the US and buying it there is not a bad idea, since I can buy some clothes and other smaller things that would make the trip worth it.
+
+I'm just waiting for a reponse from the insurance guy, so see if I can buy my camera in the US and still get it covered by their insurance policy.
+</content>
+ </entry>
+ 
+ <entry>
+   <title>WoW turns 5, Warcraft 15</title>
+   <link href="http://jpcamargo.com/2009/11/24/wow+turns+5%2C+warcraft+15"/>
+   <updated>2009-11-24T00:00:00-02:00</updated>
+   <id>http://jpcamargo.com/2009/11/24/wow turns 5, warcraft 15</id>
+   <content type="html">Considering I bought a copy of all warcraft computer games ever released, and that I've been playing Blizzard's games since 1994 when I first got my hands on a &lt;strong&gt;Warcraft: Orcs &amp; Humans&lt;/strong&gt; demo (it came in a magazine - back then was a lot harder to buy brand new games here in Brazil). And that I've been subscribed to WoW for the last 5 years (give or take).
+
+I, alone, spent close to $1200 in the last 15 years with this franchise... Congratulations warcraft... I guess.
+</content>
+ </entry>
+ 
+ <entry>
+   <title>xtreamer</title>
+   <link href="http://jpcamargo.com/2009/11/18/xtreamer"/>
+   <updated>2009-11-18T00:00:00-02:00</updated>
+   <id>http://jpcamargo.com/2009/11/18/xtreamer</id>
+   <content type="html">kenji showed this to me, and now I want it!
+
+&lt;img src=&quot;http://shop.xtreamer.net/product_images/q/etrayz_99euro__51498_thumb.jpg&quot; alt=&quot;xtreamer etrayz&quot; /&gt;
+
+&lt;a href=&quot;http://shop.xtreamer.net/products/eTRAYz-for-New-Customer.html&quot;&gt;http://www.xtreamer.net&lt;/a&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>2012</title>
+   <link href="http://jpcamargo.com/2009/11/17/2012"/>
+   <updated>2009-11-17T00:00:00-02:00</updated>
+   <id>http://jpcamargo.com/2009/11/17/2012</id>
+   <content type="html">Well, what can I say, if the movie was a preview of the future, I would probably die from boredom before the catastrophic events occur - I think I actually took a nap during it.
+
+I guess the whole earth shattering scenes were cool, but oh my god I kept trying to find young &lt;a href=&quot;http://www.imdb.com/name/nm0000704/&quot;&gt;Elijah Wood&lt;/a&gt; in a motorcycle looking for &lt;a href=&quot;http://www.imdb.com/name/nm0005447/&quot;&gt;Leelee Sobieski&lt;/a&gt; and yelling &quot;Sarah!&quot;, which to me already says a lot.
+
+Predictable, boring, exaggerated, and kind of lame - seriously, isn't the earth exploding not enough, the hero and his friends/family need to be half a second away from escaping EVERY single time?
+
+Yet, it met my entertainment expectations. I hated how the ending was all happy and shiny after a freaking cataclysm. I honestly wanted to see a sea monster attacking one of the arks!  I did like the multitude of languages and accents spoken during the movie.
+</content>
+ </entry>
+ 
+ <entry>
+   <title>passandomal.com</title>
+   <link href="http://jpcamargo.com/2009/11/05/passandomal.com"/>
+   <updated>2009-11-05T00:00:00-02:00</updated>
+   <id>http://jpcamargo.com/2009/11/05/passandomal.com</id>
+   <content type="html">Well, this is a mention of my first website, designed and programmed, using my very own blog tool, blogware. Easier to do that back then, even wordpress was a simple blog tool back then - not a CMS like it is today.
+&lt;!--more--&gt;
+&lt;img class=&quot;aligncenter size-full wp-image-223&quot; title=&quot;passandomal thumbnail&quot; src=&quot;http://jpcamargo.com/wp-content/uploads/2009/11/passandomal_thumbnail.png&quot; alt=&quot;passandomal thumbnail&quot; width=&quot;640&quot; height=&quot;150&quot; /&gt;
+
+Back in the late 90s, I used to write mostly about my life, but I used this website more to test new technologies, and workarounds, solutions to get things done. I remember that I used a javascript/iframes/php hack to make &quot;ajax&quot;-like calls. And to my knowledge, this site was the very first one to use these emulated calls like that.
+
+[caption id=&quot;attachment_225&quot; align=&quot;aligncenter&quot; width=&quot;480&quot; caption=&quot;used to write comments without reloading the page&quot;]&lt;img class=&quot;size-full wp-image-225 &quot; title=&quot;blogware - js&quot; src=&quot;http://jpcamargo.com/wp-content/uploads/2009/11/blogware_js.png&quot; alt=&quot;blogware - js&quot; width=&quot;480&quot; height=&quot;100&quot; /&gt;[/caption]
+
+I remember how this code used to work, and I remember being kind of cool back then, all of my friends were thrilled by this. Sadly or fortunately, that is nothing special these days.
+
+[caption id=&quot;attachment_224&quot; align=&quot;aligncenter&quot; width=&quot;480&quot; caption=&quot;mysql queries and html code all mixed together, funny!&quot;]&lt;img class=&quot;size-full wp-image-224 &quot; title=&quot;blogware - php&quot; src=&quot;http://jpcamargo.com/wp-content/uploads/2009/11/blogware_php.png&quot; alt=&quot;blogware - php&quot; width=&quot;480&quot; height=&quot;100&quot; /&gt;[/caption]
+
+The php source is even weirder to look at, I miss the recklessness that was programming with sql calls being made from all over the place. I remember a couple years later I started writing my own framework (like every other programmer) and it was pretty solid by the time Ruby on Rails exploded everything with it's simplicity and agility.
+
+I am considering refactoring blogware, well, actually making a new blogware would be more accurate, probably using ruby and RoR, adding some cool web 2.0 features that you can find in current cms/blog tools. And maybe some crazy new things that will be properly used 5 years from now.
+</content>
+ </entry>
+ 
+ <entry>
+   <title>happy halloween</title>
+   <link href="http://jpcamargo.com/2009/10/31/happy+halloween"/>
+   <updated>2009-10-31T00:00:00-02:00</updated>
+   <id>http://jpcamargo.com/2009/10/31/happy halloween</id>
+   <content type="html">I only wish the celebrations in Brazil would be all that fun, with all the costumes and candy hogging!
+
+But then again I can see how that could be horrible too, the pranks would most likely end in bloodshed or missing limbs to say the least.
+
+Some fun icons I found yesterday, that fit well with the date (&lt;a href=&quot;http://iconfactory.com/freeware/preview/liha&quot;&gt;source&lt;/a&gt;):
+
+[gallery link=&quot;file&quot;] 
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Bash, an Adium message style</title>
+   <link href="http://jpcamargo.com/2009/10/30/bash%2C+an+adium+message+style"/>
+   <updated>2009-10-30T00:00:00-02:00</updated>
+   <id>http://jpcamargo.com/2009/10/30/bash, an adium message style</id>
+   <content type="html">&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img class=&quot;aligncenter size-full wp-image-160&quot; title=&quot;piece of source code&quot; src=&quot;http://jpcamargo.com/wp-content/uploads/2009/10/bash-code_640x1001.png&quot; alt=&quot;bash-code_640x100&quot; width=&quot;640&quot; height=&quot;100&quot; /&gt;&lt;/p&gt;
+
+I made this because I always disliked those happy IM windows, with things bouncing around making weird sound effects. It was intially much simpler than this, but a fancy terminal is still good, as long as it is fast, right?
+
+My friends &lt;a href=&quot;http://rodrigofranco.com&quot;&gt;Caffo&lt;/a&gt;, &lt;a href=&quot;http://taizasouza.com&quot;&gt;Taiza&lt;/a&gt; and Juca helped me with this since the beginning, and there is even a Variant (color style) made by Caffo that is in the package -  bu noone likes it.
+
+I've heard that this might &lt;a href=&quot;http://www.webupd8.org/2009/05/pidgin-webkit-plugin-adium-conversation.html&quot;&gt;work on pidgin&lt;/a&gt; too, can someone confirm this? If not what changes do I need to make so this can work?
+
+[caption id=&quot;attachment_155&quot; align=&quot;alignleft&quot; width=&quot;329&quot; caption=&quot;a sample message&quot;]&lt;a href=&quot;http://jpcamargo.com/wp-content/uploads/2009/10/message-style_470x150.png&quot;&gt;&lt;img class=&quot;size-full wp-image-155  &quot; title=&quot;sample&quot; src=&quot;http://jpcamargo.com/wp-content/uploads/2009/10/message-style_470x150.png&quot; alt=&quot;message-style_470x150&quot; width=&quot;329&quot; height=&quot;105&quot; /&gt;&lt;/a&gt;[/caption]
+
+I plan to only update this to fix bugs now, but if you have any ideas, suggestions or requests, just let me know.
+
+To get this you can go to the &lt;a title=&quot;Bash, Adium Xtra - message style&quot; href=&quot;http://www.adiumxtras.com/index.php?a=xtras&amp;xtra_id=3665&quot;&gt;Adium Xtras page&lt;/a&gt;, or you can get it straight from &lt;a href=&quot;http://github.com/jao/Bash.AdiumMessageStyle&quot;&gt;GitHub&lt;/a&gt;, where you can find more versions as well.
+</content>
+ </entry>
+ 
+ <entry>
+   <title>htc hero + android</title>
+   <link href="http://jpcamargo.com/2009/10/28/htc+hero+%2B+android"/>
+   <updated>2009-10-28T00:00:00-02:00</updated>
+   <id>http://jpcamargo.com/2009/10/28/htc hero + android</id>
+   <content type="html">&lt;img src=&quot;http://jotape.org/assets/2009/10/26/HTC-Hero-jp.jpg&quot; alt=&quot;&quot; /&gt;
+Well, I played with my new phone for the last two days, and here are my first impressions:
+</content>
+ </entry>
+ 
+ <entry>
+   <title>eclair for hero!</title>
+   <link href="http://jpcamargo.com/2009/10/28/eclair+for+hero%21"/>
+   <updated>2009-10-28T00:00:00-02:00</updated>
+   <id>http://jpcamargo.com/2009/10/28/eclair for hero!</id>
+   <content type="html">Well, according to &lt;a href=&quot;http://www.androidguys.com/2009/10/28/european-htc-hero-skipping-1-6-update/#more-10347&quot;&gt;androidGuys&lt;/a&gt; HTC will be updating Hero's OS to 2.0, and skipping 1.6
+&lt;blockquote&gt;The Hero will not be receiving the Android 1.6 upgrade, it will however get the 2.0 one. Do note however that we do not have a confirmed release date for this upgrade, all I can recommend at the moment is that you keep yourself updated by visiting our website regularly as the latest information will be available to view from there.&lt;/blockquote&gt;
+We don't know when, let's hope it happens soon.
+</content>
+ </entry>
+ 
+ <entry>
+   <title>A wp android app</title>
+   <link href="http://jpcamargo.com/2009/10/28/a+wp+android+app"/>
+   <updated>2009-10-28T00:00:00-02:00</updated>
+   <id>http://jpcamargo.com/2009/10/28/a wp android app</id>
+   <content type="html">Just typing from the cell phone testing the auto correct feature, which seems to be pretty good since I have fat thumbs and there are no typos.
+
+/win
+</content>
+ </entry>
+ 
+ <entry>
+   <title>android + vlc</title>
+   <link href="http://jpcamargo.com/2009/10/27/android+%2B+vlc"/>
+   <updated>2009-10-27T00:00:00-02:00</updated>
+   <id>http://jpcamargo.com/2009/10/27/android + vlc</id>
+   <content type="html">I downloaded an &lt;a href=&quot;http://code.google.com/p/android-vlc-remote&quot;&gt;android app&lt;/a&gt; and god I like this little thing, controlling my daily tv series watching session using my phone, while I'm just laying here is just awesome.
+</content>
+ </entry>
+ 
+ <entry>
+   <title>xkcd = win</title>
+   <link href="http://jpcamargo.com/2009/10/26/xkcd+%3D+win"/>
+   <updated>2009-10-26T00:00:00-02:00</updated>
+   <id>http://jpcamargo.com/2009/10/26/xkcd = win</id>
+   <content type="html">Well, my opinion is biased since I already follow the short comic strips in &lt;a href=&quot;http://xkcd.com&quot;&gt;xkcd&lt;/a&gt;, but it was just surprisingly awesome to check it today, and see the tribute made to &lt;a href=&quot;http://geocities.yahoo.com&quot;&gt;GeoCities&lt;/a&gt; and &lt;a href=&quot;http://en.wikipedia.org/wiki/GeoCities&quot;&gt;its history&lt;/a&gt;.
+
+&lt;a href=&quot;http://jotape.org/assets/2009/10/26/xkcd_full.jpg&quot;&gt;&lt;img title=&quot;click to see a full screenshot of the page&quot; src=&quot;http://jotape.org/assets/2009/10/26/xkcd_small.jpg&quot; alt=&quot;click to see a full screenshot of the page&quot; /&gt;&lt;/a&gt;
+
+Some memorable parts stripped from the source code:
+
+&lt;strong&gt;Line 32:&lt;/strong&gt;
+&lt;code&gt;&amp;lt;SCRIPT LANGUAGE=&quot;QBASIC&quot;&amp;gt;IF $BROWSER = &quot;IE&quot; THEN GOTO 50&amp;lt;/SCRIPT&amp;gt;&lt;/code&gt;
+
+&lt;strong&gt;Line 108:
+&lt;span style=&quot;font-family: monospace, Monaco, 'Courier New', Courier, monospace; font-weight: normal; line-height: 18px; font-size: 12px; white-space: pre;&quot;&gt;&amp;lt;SCRIPT LANGUAGE='SCHEME'&amp;gt;
+define (eval exp env)  (cond ((self-evaluating? exp) exp)  ((variable? exp) ...
+&amp;lt;/SCRIPT&amp;gt;&lt;/span&gt;&lt;/strong&gt;
+&lt;pre&gt;Just wow, right?&lt;/pre&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>ruby: print in the same line</title>
+   <link href="http://jpcamargo.com/2009/10/26/ruby%3A+print+in+the+same+line"/>
+   <updated>2009-10-26T00:00:00-02:00</updated>
+   <id>http://jpcamargo.com/2009/10/26/ruby: print in the same line</id>
+   <content type="html">I’ve always tried to make my scripts’ responses prettier and less crowded, and I came across something like the following piece of code, that helped me a lot lately
+
+#!/usr/bin/env ruby
+STDOUT.sync = true
+bars = ['/','-','\\','|']
+i=1
+while i do
+  print &quot;\rrunning #{bars[i%4]}&quot;
+  i += 1
+  sleep 1
+end
+trap(&quot;INT&quot;) {
+  print &quot;\n\n&quot;
+  exit
+}
+
+If you like to see updates without flooding your terminal screen, this is one of the best ways to do it.
+</content>
+ </entry>
+ 
+ <entry>
+   <title>field trip</title>
+   <link href="http://jpcamargo.com/2009/10/20/field+trip"/>
+   <updated>2009-10-20T00:00:00-02:00</updated>
+   <id>http://jpcamargo.com/2009/10/20/field trip</id>
+   <content type="html">Somehow I was back in high school, where I saw a couple of really good friends that I’ve lost touch with, it was really refreshing to see them again – I still never asked one of them about his son, and that makes me feel really bad (the baby is almost 2). I had a vision in my dream, related to the same friend – I saw how he was dressed in his first day of school (red boots, a leather wrist piece are the details I remember now).
+
+We gathered near the school to wait for the bus, we were going on a field trip to a ranch close to my grandfather’s ranch, but I only realized that after we got there. Nothing special happened during the trip, which might be the special thing of a bus ride with a bunch of delinquents :P
+
+There were a lot of people from different times of my life in that place, which was very weird, specially because we were not welcome in the ranch, apparently we were kind of trespassing. Arguments started about the whole trespassing thing.
+
+Meanwhile I met another dear friend of mine inside the house (an ex-girlfriend’s sister), and while we were catching up a fight started between one of the random girls that was there, and one that came with me (who knows?), I tried to stop them, and I got in a fight with a guy that I also don’t know – and as all physical altercations that happen in my dreams, the fight happened in some sort of slow motion, where I feel stripped of all my strength and everything happens very slowly and very weakly – And I can never tell who “won”.
+
+My grandfather, who is dead, showed up to solve the situation once and for all, and talked to the owner’s grandchild, calling him valklug. The name got me so intrigued that I woke up soon after this.
+</content>
+ </entry>
+ 
+ <entry>
+   <title>dreamcatcher</title>
+   <link href="http://jpcamargo.com/2009/10/20/dreamcatcher"/>
+   <updated>2009-10-20T00:00:00-02:00</updated>
+   <id>http://jpcamargo.com/2009/10/20/dreamcatcher</id>
+   <content type="html">I used to be a part of a list where we would write our dreams and share them, and I remember it was a fun thing to do, so I started taking notes, and posting them on this blog.
+Like the &lt;a href=&quot;http://jotape.org/wishlist&quot;&gt;wishlist&lt;/a&gt;, they won't show in the home page, but they are accessible by the categories section, or using &lt;a href=&quot;http://jotape.org/dreamcatcher&quot;&gt;this link&lt;/a&gt;
+Feel free to read, comment and judge :D
+</content>
+ </entry>
+ 
+ <entry>
+   <title>bloom frame</title>
+   <link href="http://jpcamargo.com/2009/10/19/bloom+frame"/>
+   <updated>2009-10-19T00:00:00-02:00</updated>
+   <id>http://jpcamargo.com/2009/10/19/bloom frame</id>
+   <content type="html">&lt;img src=&quot;http://www.bloomframe.com/images/visual/visual.jpg&quot; alt=&quot;&quot; /&gt;
+&lt;a href=&quot;http://www.bloomframe.com&quot;&gt;http://www.bloomframe.com&lt;/a&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>di-lb604 4-port load balancing router</title>
+   <link href="http://jpcamargo.com/2009/10/16/di-lb604+4-port+load+balancing+router"/>
+   <updated>2009-10-16T00:00:00-03:00</updated>
+   <id>http://jpcamargo.com/2009/10/16/di-lb604 4-port load balancing router</id>
+   <content type="html">&lt;img src=&quot;http://images.dlink.com/new/products/DI-LB604/DI-LB604_right.png&quot; alt=&quot;&quot; /&gt;
+&lt;a href=&quot;http://www.dlink.com/products/?pid=452&quot;&gt;di-lb604 4-port load balancing router&lt;/a&gt;
+&lt;strong&gt;update: done&lt;/strong&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>wishlist start</title>
+   <link href="http://jpcamargo.com/2009/10/09/wishlist+start"/>
+   <updated>2009-10-09T00:00:00-03:00</updated>
+   <id>http://jpcamargo.com/2009/10/09/wishlist start</id>
+   <content type="html">Ok, let's start this with style&amp;#8230;
+&lt;img src=&quot;http://jotape.org/assets/2009/10/22/dolphinboat.jpg&quot; alt=&quot;&quot; /&gt;
+&lt;a href=&quot;http://www.seabreacher.com&quot;&gt;http://www.seabreacher.com&lt;/a&gt;
+I won't be showing this posts in the regular home though, they don't really fit in here&amp;#8230;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>iphone or android?</title>
+   <link href="http://jpcamargo.com/2009/10/08/iphone+or+android%3F"/>
+   <updated>2009-10-08T00:00:00-03:00</updated>
+   <id>http://jpcamargo.com/2009/10/08/iphone or android?</id>
+   <content type="html">So, I need a new phone :P
+What should I get? And why?
+</content>
+ </entry>
+ 
+ <entry>
+   <title>on tv</title>
+   <link href="http://jpcamargo.com/2009/10/07/on+tv"/>
+   <updated>2009-10-07T00:00:00-03:00</updated>
+   <id>http://jpcamargo.com/2009/10/07/on tv</id>
+   <content type="html">So, most series came back, and some new ones started&amp;#8230;
+Here is a list of the series I'm following lately:
+  
+90210
+bones
+californication
+csi
+dark blue
+defying gravity
+dollhouse
+fringe
+gossip girl
+greek
+grey's anatomy
+heroes
+house
+hung
+melrose place 2009
+ncis
+ncis los angeles
+smallvile
+the big bang theory
+the forgotten
+the good wife
+the vampire diaries
+trauma
+two and a half men
+true blood*
+
+Yeah, a lot of time to watch all of those series&amp;#8230; sadly I'm silly enough to enjoy it.
+On top of that I decided to watch all 95 episoes of Rurouni Kenshin, and a few movies that aren't really that good to be mentioned.
+</content>
+ </entry>
+ 
+ <entry>
+   <title>infestation</title>
+   <link href="http://jpcamargo.com/2009/10/03/infestation"/>
+   <updated>2009-10-03T00:00:00-03:00</updated>
+   <id>http://jpcamargo.com/2009/10/03/infestation</id>
+   <content type="html">I was in a movie theater, watching a movie, when I realized what was going on, this infestation, small worms that craw inside our flesh, and incubate until they are ready for their next phase&amp;#8230; then they would come out and grow up rapidly&amp;#8230; we had to pull them out, and set them on fire with a zippo ligher, to this moment, my arm still feels weird for having those worms sucking my blood.
+this creatures were pretty scary, they were mere worms, thin like spaghetti at their 1st stage, but when burned they would get in the most amazing shapes, spirals mostly, but different ones all the time, i think they do that to avoid burning down completely, since that way they would actually survive, and regenerate really fast.
+When they were ready to grow to their second stage, they would freaking grow &lt;span class=&quot;caps&quot;&gt;FAST&lt;/span&gt;&amp;#8230; from a small worm to a cat sized catterpillar in a matter of seconds. I didn't really get to observe another change, but something kept telling me they would get even bigger and stronger.
+I saw a young girl, very pretty. I helped her and her 2 brothers to get rid of the worms that were on their bodies, and then a theatrical group was getting ready to storm the theather.
+One of the guys really didn't like me, because of our past, something about a girl. I don't really remember.
+This guy suddenly tackled me, and during this altercation &amp;#8211; one of the worms that crawled into my arm, grew up, and It was a horrible feeling, like I was about to faint, weakness all around, all I wanted was to lay there and sleep.
+I imagined that this would be pretty close to actually being bitten by a vampire.
+After running around, trying to help people deal with this creatures, we were so tired that we had to rest&amp;#8230; so we all sat down, I put my arm around the young girl, and realized that the guy didn't really like that, so I just removed my arm, and laid back.
+and fell asleep, waking up immediately after.</content>
+ </entry>
+ 
+ <entry>
+   <title>Lang.new</title>
+   <link href="http://jpcamargo.com/2009/10/02/lang.new"/>
+   <updated>2009-10-02T00:00:00-03:00</updated>
+   <id>http://jpcamargo.com/2009/10/02/lang.new</id>
+   <content type="html">&lt;p&gt;Well, thanks to Juca, I've joined an online community called &lt;a href=&quot;http://www.busuu.com&quot;&gt;busuu&lt;/a&gt;, which is basically a group of people helping each other to learn other languages.&lt;/p&gt;
+&lt;p&gt;So I've decided to learn (or get better) italian, french, german and spanish!&lt;/p&gt;
+&lt;p&gt;I'll probably fail miserably, but it's rather easy to get started on any of those and a bunch of other languages.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>bbc's online zoo</title>
+   <link href="http://jpcamargo.com/2009/09/30/bbc%27s+online+zoo"/>
+   <updated>2009-09-30T00:00:00-03:00</updated>
+   <id>http://jpcamargo.com/2009/09/30/bbc's online zoo</id>
+   <content type="html">&lt;p&gt;This &lt;span class=&quot;caps&quot;&gt;BBC&lt;/span&gt; wildlifefinder project seems to be amazing, but the videos are not working at the moment&amp;#8230; (maybe it's just me).&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.bbc.co.uk/nature/animals/&quot;&gt;check it out&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&quot;http://www.bbc.co.uk/nature/species/Giant_Panda&quot;&gt;giant panda&lt;/a&gt; sounds like a dog I used to have, when she was barking at my computer desk, or anything else that didn't play with her! :D&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>google profile</title>
+   <link href="http://jpcamargo.com/2009/09/29/google+profile"/>
+   <updated>2009-09-29T00:00:00-03:00</updated>
+   <id>http://jpcamargo.com/2009/09/29/google profile</id>
+   <content type="html">&lt;p&gt;Even if you don't care too much about it, I think you should update your google profile.&lt;/p&gt;
+&lt;p&gt;Just use this link &lt;a href=&quot;http://www.google.com/profiles&quot;&gt;http://www.google.com/profiles&lt;/a&gt; and edit your personal information&amp;#8230; All I want is to have my friend's birthdays on my google calendar (contacts), without adding it myself :D&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>home computing</title>
+   <link href="http://jpcamargo.com/2009/09/24/home+computing"/>
+   <updated>2009-09-24T00:00:00-03:00</updated>
+   <id>http://jpcamargo.com/2009/09/24/home computing</id>
+   <content type="html">I’ve always had bigger plans than I should for the computer(s) I have at home, now I’m planning on actually using 3 machines, with 4 screens in my personal computer desk. One of them being a TV.
+
+My initial idea was to use a 13&quot; macbook (with a second monitor) to control 2 other linux machines, one being an application server, and the other one a media server (on a monitor/TV).
+
+Something like this
+&lt;img src=&quot;http://jotape.org/assets/2009/9/24/home_screens.png&quot; alt=&quot;&quot; /&gt;
+
+But I might turn the media server into a hackintosh instead. The app server will be running on an ubuntu jaunty, only accessible via ssh and all that.
+
+After reading more about freenas, it makes me wonder if I should try something with a storage server + media/app server instead… oh well.
+</content>
+ </entry>
+ 
+ <entry>
+   <title>car free day</title>
+   <link href="http://jpcamargo.com/2009/09/22/car+free+day"/>
+   <updated>2009-09-22T00:00:00-03:00</updated>
+   <id>http://jpcamargo.com/2009/09/22/car free day</id>
+   <content type="html">&lt;p&gt;I wish&amp;#8230; I bet people are protesting against it. No, seriously, it looks like there are more cars around than a normal day.&lt;br /&gt;
+Go go &lt;a href=&quot;http://www.worldcarfree.net/wcfd/&quot;&gt;http://www.worldcarfree.net/wcfd/&lt;/a&gt; !&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>git, pushing to multiple repositories</title>
+   <link href="http://jpcamargo.com/2009/09/21/git%2C+pushing+to+multiple+repositories"/>
+   <updated>2009-09-21T00:00:00-03:00</updated>
+   <id>http://jpcamargo.com/2009/09/21/git, pushing to multiple repositories</id>
+   <content type="html">I was looking for a way to keep more than one repository updated when I'm working on personal projects, don't ask. So I found some useful information I'm going to post here for future reference.
+&lt;p&gt;Example part of a &amp;#8220;.git/config&amp;#8221; file:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[remote 'all']
+    url=ssh://user&amp;amp;#64;server/repos/g0.git
+    url=ssh://user&amp;amp;#64;server/repos/g1.git
+    url=ssh://user&amp;amp;#64;server/repos/g2.git
+    url=ssh://user&amp;amp;#64;server/repos/g3.git&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;With that &amp;#8220;git push all&amp;#8221; should push to all the remotes simultaneously.&lt;/p&gt;
+&lt;p&gt;If you have:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[branch 'master']
+    remote = g0
+    merge = refs/heads/master
+[remote 'g0']
+    url = ssh://user&amp;amp;#64;server/repos/g0.git
+    fetch = +refs/heads/*:refs/remotes/g0/*&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then &amp;#8220;pulls&amp;#8221; and &amp;quot;fetch&amp;quot;'s while on the master branch should only only target &lt;code&gt;ssh://user&amp;amp;#64;server/repos/g0.git&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Better yet:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[branch 'master']
+    remote = origin
+    merge = refs/heads/master
+[remote 'origin']
+    url = ssh://user&amp;amp;#64;server/repos/g0.git
+    fetch = +refs/heads/*:refs/remotes/g0/*&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then &lt;code&gt;ssh://user&amp;amp;#64;server/repos/g0.git&lt;/code&gt; is the default remote (&amp;#8220;origin&amp;#8221;) for pulls and fetches if no remote name is specified.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://marc.info/?l=git&amp;amp;m=116231242118202&amp;amp;w=2&quot;&gt;source&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>dual wan routers</title>
+   <link href="http://jpcamargo.com/2009/09/21/dual+wan+routers"/>
+   <updated>2009-09-21T00:00:00-03:00</updated>
+   <id>http://jpcamargo.com/2009/09/21/dual wan routers</id>
+   <content type="html">&lt;p&gt;I&amp;#8217;m looking for a dual wan router, but since it is for my home network, it must be c-h-e-a-p.&lt;/p&gt;
+&lt;p&gt;I found a &lt;a href=&quot;http://www.dlink.com/products/?pid=452&quot;&gt;D-Link Di-lb604&lt;/a&gt; that seems to solve my problems, but it was discontinued, making it harder to find.&lt;/p&gt;
+&lt;p&gt;Does anyone know about any other router that satisfies my needs?&lt;/p&gt;</content>
+ </entry>
+ 
+ 
+</feed>
