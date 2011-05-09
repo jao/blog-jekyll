@@ -11,21 +11,21 @@ layout: default
   <h3>projects</h3>
   <ul>
   {% for post in site.categories.project limit: 5 %}
-    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    <li><a href="{{ post.url | replace:'+','%20' }}">{{ post.title }}</a></li>
   {% endfor %}
   </ul>
   
   <h3>code</h3>
   <ul>
   {% for post in site.categories.code limit: 5 %}
-    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    <li><a href="{{ post.url | replace:'+','%20' }}">{{ post.title }}</a></li>
   {% endfor %}
   </ul>
   
   <h3>wishlist</h3>
   <ul>
   {% for post in site.categories.wishlist limit: 5 %}
-    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    <li><a href="{{ post.url | replace:'+','%20' }}">{{ post.title }}</a></li>
   {% endfor %}
   </ul>
 </div>
@@ -33,6 +33,6 @@ layout: default
 <h5>archive</h5>
 <ul>
 {% for post in site.posts %}
-  <li><span id="date">{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+  <li><span id="date">{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url | replace:'+','%20' }}">{{ post.title }}</a></li>
 {% endfor %}
 </ul>
