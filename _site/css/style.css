@@ -14,8 +14,19 @@ ol, ul, li {list-style:none;}
 a {outline:none;}
 a img {border:none;}
 
+/*
+FONT FUN
+Gaming Classics: Atari 2600 Classic
+by http://www.zeh.com.br
+*/
+@font-face {
+ font-family: "gaming atari2600 basic";
+ src: url("/fonts/gaming_atari2600_basic.eot"); /* EOT file for IE */
+ src: url("/fonts/gaming_atari2600_basic.ttf"); /* TTF file for CSS3 browsers */
+}
+
 /* COLORS */
-body {background:#D3CDB5; color:#454128; font-family:helvetica, sans serif;}
+body {background:#D3CDB5; color:#454128; font-family:helvetica, sans serif; font-size:12px;}
 
 a:link, a:visited, a:active {color:#79766C; text-decoration:none;}
 a:hover {color:#FFFFCC; background-color:#79766C;}
@@ -25,23 +36,24 @@ header {border-bottom:1px solid; text-align:right; margin-bottom:20px;}
 footer {border-top:1px solid;}
 header section, footer section {width:900px; margin:auto;}
 
-header h1 {text-transform:uppercase; font-size:32px; color:#F7F2DA; margin-bottom:-28px; font-family:Impact, fantasy; text-shadow:1px 1px 1px #454128;}
+header h1 {text-transform:uppercase; font-size:24px; color:#F7F2DA; padding-top:40px; margin-bottom:-20px; font-family:"gaming atari2600 basic", Impact; text-shadow:1px 1px 1px #454128;}
 
 #content {padding:10px 25px 10px 25px; margin:auto; width:900px;}
 #content:after {content:' '; clear:both;}
 
-article, aside {background:#F7F2DA; padding:5px 10px 10px 10px; border:1px solid #454128; border-radius:0px 3px 0px 3px;}
-article {width:630px; float:left; margin-bottom:20px;}
-article h2 a:link, article h2 a:visited {color:#454128!important;}
+article, aside {background:#F7F2DA; padding:5px 10px 10px 10px; border:1px solid #454128; border-radius:0px 3px 0px 3px; margin-bottom:20px;}
+article {width:630px; float:left;}
 article h2 {margin:0px -5px 5px -5px; padding:5px; border:1px solid #454128; background:#D3CDB5; border-radius:0px 3px 0px 3px;}
-article h2 date {font-size:11px; float:right; margin-top:3px;}
+article h2 date {font-size:11px; float:right; margin-top:2px;}
 article p {margin-bottom:10px;}
 article ul {margin:15px;}
 article li {list-style:disc; margin-left:10px;}
 
-aside {width:220px; float:right;}
+aside {width:220px; float:right; font-size:12px;}
 aside h3 {margin:0px -5px 5px -5px; padding:5px; border:1px solid #454128; background:#D3CDB5; border-radius:0px 3px 0px 3px;}
-aside ul {margin:5px;}
+aside .me {margin:auto; float:left; margin:0 5px 5px 0;}
+aside .me img {border:1px solid #454128; width:50px; height:50px;}
+aside ul, aside p {margin:5px;}
 
 
 

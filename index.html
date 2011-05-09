@@ -4,6 +4,6 @@ layout: default
 
 {% assign first_post = site.posts.first %}
 <article>
-  <h2><a href="{{ first_post.url }}">{{ first_post.title }}</a> <date>{{ first_post.date | date: "%d/%m/%Y"}}</date></h2>
+  <h2>{{ first_post.title }} <date>{{ first_post.date | date: "%d/%m/%Y"}}</date></h2>
   {{ first_post.content }}
 </article>
