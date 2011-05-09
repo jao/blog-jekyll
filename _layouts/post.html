@@ -1,8 +1,8 @@
 ---
 layout: default
 ---
-<div>
-{{ page.date  | date_to_string }}
-</div>
 
-{{ content }}
+<article>
+  <h2>{{ page.title }} <date>{{ page.date | date: "%d/%m/%Y"}}</date></h2>
+  {{ content }}
+</article>

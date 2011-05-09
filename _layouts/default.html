@@ -5,15 +5,50 @@
 <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen, projection" />
 </head>
 <body>
-<div id="wrapper">
-  <div id="header">
-    <h1>{{ page.title }}</h1>
-  </div>
-  <div id="content">
+<section id="wrapper">
+  <header>
+    <section>
+      <h1>jpcamargo.com</h1>
+    </section>
+  </header>
+  <section id="content">
     {{ content }}
-  </div>
-  <div id="footer"></div>
-</div>
+    
+    <aside>
+      <h3>projects</h3>
+      <ul>
+      {% for post in site.categories.project limit: 5 %}
+        <li><a href="{{ post.url | replace:'+','%20' }}">{{ post.title }}</a></li>
+      {% endfor %}
+      </ul>
+
+      <h3>code</h3>
+      <ul>
+      {% for post in site.categories.code limit: 5 %}
+        <li><a href="{{ post.url | replace:'+','%20' }}">{{ post.title }}</a></li>
+      {% endfor %}
+      </ul>
+
+      <h3>wishlist</h3>
+      <ul>
+      {% for post in site.categories.wishlist limit: 5 %}
+        <li><a href="{{ post.url | replace:'+','%20' }}">{{ post.title }}</a></li>
+      {% endfor %}
+      </ul>
+    </aside>
+  </section>
+  <footer>
+    <section>
+      <h2>archive</h2>
+      <ul>
+      {% for post in site.posts %}
+        <li><span id="date">{{ post.date | date: "%d/%m/%Y" }}</span> &raquo; <a href="{{ post.url | replace:'+','%20' }}">{{ post.title }}</a></li>
+      {% endfor %}
+      </ul>
+    </section>
+  </footer>
+</section>
+
 <script type="text/javascript">
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-11347736-1']);

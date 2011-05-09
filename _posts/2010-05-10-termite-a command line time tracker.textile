@@ -8,12 +8,12 @@ Recently I felt the need to have some kind of time tracking tool, so I wrote a s
 
 It is definitely a work in progress, but right now it is very easy to use and it gives reports for the last few days, last 3 weeks, and current month. Also, for mac users, it has the option to change your Adium statuses using osascript, with customizable status messages for a few situations.
 
-<img src="http://cl.ly/11ok/content" alt="termite report weekly" />
+!http://cl.ly/11ok/Screen_shot_2010-05-10_at_14.18.44.png(termite report weekly)!
 weekly report
 
-<img src="http://cl.ly/10uo/content" alt="termite report monthly" />
+!http://cl.ly/10uo/Screen_shot_2010-05-10_at_14.17.44.png(termite report monthly)!
 monthly report
 
-You can find the source code and installation instructions at github (<a href="http://github.com/jao/termite">http://github.com/jao/termite</a>).
+You can find the source code and installation instructions at github ("http://github.com/jao/termite":http://github.com/jao/termite).
 
 I plan to add features like, defining projects and tags to the worked time, and exporting the reports to formats like pdf and csv.
