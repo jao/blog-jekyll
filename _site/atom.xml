@@ -4,13 +4,26 @@
  <title>jp camargo</title>
  <link href="http://jpcamargo.com/atom.xml" rel="self"/>
  <link href="http://jpcamargo.com/"/>
- <updated>2011-05-09T19:52:16-03:00</updated>
+ <updated>2011-05-10T16:17:38-03:00</updated>
  <id>http://jpcamargo.com/</id>
  <author>
    <name>João Paulo Camargo</name>
    <email>mailto+blog@jpcamargo.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Jekyll and some other news</title>
+   <link href="http://jpcamargo.com/2011/05/10/jekyll+and+some+other+news"/>
+   <updated>2011-05-10T00:00:00-03:00</updated>
+   <id>http://jpcamargo.com/2011/05/10/jekyll and some other news</id>
+   <content type="html">&lt;p&gt;Moving from wordpress to Jekyll was easier than I thought, but running jekyll on Heroku wasn&amp;#8217;t as simple &amp;#8211; for some reason I keep having issues with the links when using rack-jekyll.&lt;/p&gt;
+&lt;p&gt;The layout is something close to the old &lt;em&gt;passandomal.com&lt;/em&gt;, something that I pretty much know I used to like, and was fast enough to make this Dr. jekyll thing work. Now, let&amp;#8217;s take Mr. Hyde for a ride.&lt;/p&gt;
+&lt;p&gt;I have also started to play around with the new changes in rails 3.1 beta, and I am considering porting termite to ruby 1.9.2 and rails 3.x related gems.&lt;/p&gt;
+&lt;p&gt;On the other hand, my credit card bill just arrived, and I &lt;strong&gt;finally&lt;/strong&gt; know how far of the reservation I was during my first day in Lima last month. It&amp;#8217;s time to save some money.&lt;/p&gt;
+&lt;p&gt;Which brings me to my next point, since it is a &lt;em&gt;good&lt;/em&gt; way to have &lt;strong&gt;cheap&lt;/strong&gt; fun, I&amp;#8217;ve started playing WoW more seriously again, not dead serious like it once was, just on a &lt;em&gt;schedule&lt;/em&gt; with some real life friends.&lt;/p&gt;
+&lt;p&gt;This change will most likely mean that I will also write more about anything, since when I&amp;#8217;m having fun I don&amp;#8217;t actually share what I&amp;#8217;m doing, so hopefully when I&amp;#8217;m bored I will.&lt;/p&gt;</content>
+ </entry>
  
  <entry>
    <title>2000ELEVEN</title>

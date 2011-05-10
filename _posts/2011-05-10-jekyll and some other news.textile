@@ -1,0 +1,17 @@
+---
+layout: post
+title: Jekyll and some other news
+categories: life
+---
+
+Moving from wordpress to Jekyll was easier than I thought, but running jekyll on Heroku wasn't as simple - for some reason I keep having issues with the links when using rack-jekyll.
+
+The layout is something close to the old _passandomal.com_, something that I pretty much know I used to like, and was fast enough to make this Dr. jekyll thing work. Now, let's take Mr. Hyde for a ride.
+
+I have also started to play around with the new changes in rails 3.1 beta, and I am considering porting termite to ruby 1.9.2 and rails 3.x related gems.
+
+On the other hand, my credit card bill just arrived, and I *finally* know how far of the reservation I was during my first day in Lima last month. It's time to save some money.
+
+Which brings me to my next point, since it is a _good_ way to have *cheap* fun, I've started playing WoW more seriously again, not dead serious like it once was, just on a _schedule_ with some real life friends.
+
+This change will most likely mean that I will also write more about anything, since when I'm having fun I don't actually share what I'm doing, so hopefully when I'm bored I will.

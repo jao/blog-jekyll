@@ -2,23 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>/</loc>
-    <lastmod>2011-05-09T19:52:16-03:00</lastmod>
+    <lastmod>2011-05-10T16:17:38-03:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>/archive.html</loc>
-    <lastmod>2011-05-09T19:52:16-03:00</lastmod>
+    <lastmod>2011-05-10T16:17:38-03:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>/me/</loc>
-    <lastmod>2011-05-09T19:52:16-03:00</lastmod>
+    <lastmod>2011-05-10T16:17:38-03:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   
+  <url>
+    <loc>/2011/05/10/jekyll+and+some+other+news</loc>
+    <lastmod>2011-05-10T00:00:00-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+   </url>
+   
   <url>
     <loc>/2011/01/04/2000eleven</loc>
     <lastmod>2011-01-04T00:00:00-02:00</lastmod>
