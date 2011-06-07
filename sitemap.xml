@@ -10,12 +10,6 @@ layout: nil
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>{{ site.base }}/archive.html</loc>
-    <lastmod>{{ site.time | date_to_xmlschema}}</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>{{ site.base }}/me/</loc>
     <lastmod>{{ site.time | date_to_xmlschema}}</lastmod>
     <changefreq>daily</changefreq>
